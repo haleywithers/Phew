@@ -32,7 +32,7 @@
                 {%- render 'brick-text', block: block, animation_anchor: animation_anchor -%}
 
               {%- when 'newsletter' -%}
-                {%- if section.settings.klaviyo_embed != blank -%}
+                {%- if block.settings.klaviyo_embed != blank -%}
                   <div class="brick__block brick__block--newsletter brick__block--klaviyo" {{ block.shopify_attributes }}>
                     <div class="brick__newsletter">
                       {{ block.settings.klaviyo_embed }}
