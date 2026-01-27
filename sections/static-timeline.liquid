@@ -9,54 +9,17 @@
   endcapture
 -%}
 
+<script src="{{ 'timeline.js' | asset_url }}" defer="defer"></script>
+
 <section
   id="StaticTimeline--{{ section.id }}"
   data-section-id="{{ section.id }}"
+  data-section-type="static-timeline"
   class="static-timeline {{ color_scheme }}"
   style="{{ style }}"
 >
   <div class="static-timeline__container">
-    {%- comment -%} TIMELINE SIDE {%- endcomment -%}
-    <div class="static-timeline__content">
-      <div class="static-timeline__content-inner">
-        {%- for block in section.blocks -%}
-          {%- if block.settings.heading != blank or block.settings.text != blank -%}
-            <div class="static-timeline__item" {{ block.shopify_attributes }}>
-              <div class="static-timeline__dot-wrapper">
-                <span class="static-timeline__dot"></span>
-                {%- unless forloop.last -%}
-                  <span class="static-timeline__line"></span>
-                {%- endunless -%}
-              </div>
-              
-              <div class="static-timeline__text">
-                {%- if block.settings.heading != blank -%}
-                  {%- liquid
-                    assign heading_tag = 'h3'
-
-                    unless block.settings.heading_tag == 'automatic' or block.settings.heading_tag == blank
-                      assign heading_tag = block.settings.heading_tag
-                    endunless
-                  -%}
-
-                  <{{ heading_tag }} class="static-timeline__heading {{ block.settings.heading_font_size }}">
-                    {{ block.settings.heading }}
-                  </{{ heading_tag }}>
-                {%- endif -%}
-
-                {%- if block.settings.text != blank -%}
-                  <div class="static-timeline__body {{ block.settings.text_font_size }} rte">
-                    {{ block.settings.text }}
-                  </div>
-                {%- endif -%}
-              </div>
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
-    </div>
-
-    {%- comment -%} IMAGE SIDE {%- endcomment -%}
+    {%- comment -%} IMAGE SIDE - Shows first on mobile {%- endcomment -%}
     <div class="static-timeline__image-side">
       {%- if section.settings.image != blank -%}
         <div class="static-timeline__image-wrapper">
@@ -66,7 +29,7 @@
                     {{ section.settings.image | image_url: width: 750 }} 750w,
                     {{ section.settings.image | image_url: width: 1000 }} 1000w,
                     {{ section.settings.image | image_url: width: 1200 }} 1200w"
-            sizes="50vw"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="{{ section.settings.image.alt | escape }}"
             loading="lazy">
         </div>
@@ -75,6 +38,88 @@
           {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
         </div>
       {%- endif -%}
+    </div>
+
+    {%- comment -%} TIMELINE SIDE {%- endcomment -%}
+    <div class="static-timeline__content">
+      <timeline-component class="static-timeline__timeline-wrapper" data-timeline-mobile>
+        {%- if request.design_mode -%}
+          {%- assign blocks_counter_design = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.heading != blank or block.settings.text != blank -%}
+              <div
+                class="timeline__row__editor"
+                data-timeline-row-editor
+                style="--row-count: {{ blocks_counter_design }};"
+                {{ block.shopify_attributes }}
+              >
+                &nbsp;
+              </div>
+              {%- assign blocks_counter_design = blocks_counter_design | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+
+        <div class="static-timeline__content-inner" data-timeline-rows>
+          {%- assign blocks_counter = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.heading != blank or block.settings.text != blank -%}
+              {%- assign blocks_counter = blocks_counter | plus: 1 -%}
+              
+              <div class="static-timeline__item{% if blocks_counter == 1 %} is-selected{% endif %}" data-timeline-row {{ block.shopify_attributes }}>
+                <div class="static-timeline__item-content">
+                  <div class="static-timeline__dot-wrapper">
+                    <span class="static-timeline__dot"></span>
+                    {%- unless forloop.last -%}
+                      <span class="static-timeline__line"></span>
+                    {%- endunless -%}
+                  </div>
+                  
+                  <div class="static-timeline__text">
+                    {%- if block.settings.heading != blank -%}
+                      {%- liquid
+                        assign heading_tag = 'h3'
+
+                        unless block.settings.heading_tag == 'automatic' or block.settings.heading_tag == blank
+                          assign heading_tag = block.settings.heading_tag
+                        endunless
+                      -%}
+
+                      <{{ heading_tag }} class="static-timeline__heading {{ block.settings.heading_font_size }}">
+                        {{ block.settings.heading }}
+                      </{{ heading_tag }}>
+                    {%- endif -%}
+
+                    {%- if block.settings.text != blank -%}
+                      <div class="static-timeline__body {{ block.settings.text_font_size }} rte">
+                        {{ block.settings.text }}
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+
+                {%- comment -%} Timeline indicator for mobile swiper {%- endcomment -%}
+                <span class="static-timeline__indicator" data-target-index="{{ blocks_counter }}">
+                  <span class="static-timeline__indicator-line">&nbsp;</span>
+                </span>
+
+                <div class="static-timeline__dot-mobile-wrapper" data-target-index="{{ blocks_counter }}">
+                  <div class="static-timeline__dot-mobile-holder">
+                    <button
+                      type="button"
+                      class="static-timeline__dot-mobile-button"
+                      aria-label="Scroll to item {{ blocks_counter }}"
+                      data-timeline-button
+                    >
+                      <span class="static-timeline__dot-mobile">&nbsp;</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </timeline-component>
     </div>
   </div>
 </section>
@@ -86,7 +131,6 @@
 
   .static-timeline__container {
     display: flex;
-    min-height: 100vh;
   }
 
   .static-timeline__content {
@@ -95,10 +139,15 @@
     align-items: center;
     justify-content: center;
     padding: 6rem 4rem;
+    order: 1;
+  }
+
+  .static-timeline__timeline-wrapper {
+    width: 100%;
+    max-width: 600px;
   }
 
   .static-timeline__content-inner {
-    max-width: 600px;
     width: 100%;
   }
 
@@ -106,6 +155,12 @@
     display: flex;
     gap: 2.5rem;
     position: relative;
+  }
+
+  .static-timeline__item-content {
+    display: flex;
+    gap: 2.5rem;
+    width: 100%;
   }
 
   .static-timeline__item:not(:last-child) {
@@ -161,6 +216,7 @@
     width: 50vw;
     position: relative;
     overflow: hidden;
+    order: 2;
   }
 
   .static-timeline__image-wrapper {
@@ -187,28 +243,129 @@
     opacity: 0.3;
   }
 
+  /* Hide mobile timeline controls on desktop */
+  .static-timeline__indicator,
+  .static-timeline__dot-mobile-wrapper {
+    display: none;
+  }
+
   @media screen and (max-width: 768px) {
     .static-timeline__container {
       flex-direction: column;
       min-height: auto;
     }
 
+    .static-timeline__image-side {
+      width: 100%;
+      min-height: 40vh;
+      position: relative;
+      order: 1;
+    }
+
     .static-timeline__content {
-      padding: 4rem 2rem;
+      padding: 0;
+      order: 2;
+      display: block;
+    }
+
+    .static-timeline__timeline-wrapper {
+      max-width: 100%;
+    }
+
+    .static-timeline__content-inner {
+      position: relative;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      padding: 4rem 0 6rem;
     }
 
     .static-timeline__item {
-      gap: 1.5rem;
+      flex: 0 0 calc(100vw - 64px);
+      scroll-snap-align: center;
+      margin: 0 32px;
+      flex-direction: column;
     }
 
     .static-timeline__item:not(:last-child) {
-      margin-bottom: 3rem;
+      margin-bottom: 0;
     }
 
-    .static-timeline__image-side {
+    .static-timeline__item-content {
+      gap: 1.5rem;
+    }
+
+    /* Hide desktop timeline dots/lines on mobile */
+    .static-timeline__dot-wrapper {
+      display: none;
+    }
+
+    /* Show mobile timeline indicators */
+    .static-timeline__indicator {
+      display: block;
+      position: absolute;
+      bottom: 2.5rem;
+      left: 32px;
+      right: 32px;
+      height: 2px;
+      background-color: currentColor;
+      opacity: 0.2;
+    }
+
+    .static-timeline__indicator-line {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+      width: 0;
+    }
+
+    .static-timeline__item.is-selected .static-timeline__indicator-line {
       width: 100%;
-      min-height: 50vh;
+    }
+
+    .static-timeline__dot-mobile-wrapper {
+      display: block;
+      position: absolute;
+      bottom: 1.5rem;
+      left: 32px;
+      right: 32px;
+      height: 20px;
+      pointer-events: none;
+    }
+
+    .static-timeline__dot-mobile-holder {
       position: relative;
+      height: 100%;
+    }
+
+    .static-timeline__dot-mobile-button {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: left 0.3s ease;
+    }
+
+    .static-timeline__dot-mobile {
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: currentColor;
+    }
+
+    .static-timeline__text {
+      padding-top: 0;
     }
   }
 </style>
