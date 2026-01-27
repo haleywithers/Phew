@@ -300,6 +300,7 @@ p {
         padding: var(--gutter) var(--outer);
     }
     .footer-custom__bottom {
-        justify-content: center !importatn;
+        justify-content: center !important;
+        padding-bottom: 2rem !important;
     }
  }
