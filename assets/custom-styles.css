@@ -326,4 +326,8 @@ p {
     .footer-custom__menu {
         list-style: none !important;
     }
+
+    .footer-custom__menu list-unstyled {
+        margin: 0 !important;
+    }
  }
