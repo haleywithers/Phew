@@ -291,6 +291,13 @@
         "padding_bottom": 50
       }
     },
+    "anchor_link_tyrgYX": {
+      "type": "anchor-link",
+      "name": "💫 Anchor link",
+      "settings": {
+        "link_anchor": "faq"
+      }
+    },
     "section_accordion_group_Bqxp8q": {
       "type": "section-accordion-group",
       "blocks": {
@@ -506,8 +513,8 @@
         "blocks_per_row": 4,
         "layout_mobile": "slider",
         "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
+        "padding_top": 100,
+        "padding_bottom": 100,
         "heading_tag": "automatic"
       }
     },
@@ -566,6 +573,13 @@
         "custom_class": ""
       }
     },
+    "anchor_link_XmFnqn": {
+      "type": "anchor-link",
+      "name": "💫 Anchor link",
+      "settings": {
+        "link_anchor": "about"
+      }
+    },
     "section_double_8EWVEV": {
       "type": "section-double",
       "blocks": {
@@ -608,6 +622,25 @@
         "custom_class": ""
       }
     },
+    "animated_stickers_pyz8CL": {
+      "type": "animated-stickers",
+      "name": "💫 Animated Sticker",
+      "settings": {
+        "image": "shopify://shop_images/Small_Wins.svg",
+        "animation": "pulse",
+        "animationSpeed": 8,
+        "sticker_align_desktop": "right",
+        "sticker_top_desktop": 15,
+        "sticker_side_desktop": 6,
+        "sticker_width_desktop": 150,
+        "mobile_hide": false,
+        "sticker_align_mobile": "right",
+        "sticker_top_mobile": 25,
+        "sticker_width_mobile": 100,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "section_newsletter_C36BcR": {
       "type": "section-newsletter",
       "blocks": {
@@ -644,8 +677,27 @@
         "height": "three-fifty-height-hero",
         "mobile_height": "screen-height-one-half--mobile",
         "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "animated_stickers_eez3cM": {
+      "type": "animated-stickers",
+      "name": "💫 Animated Sticker",
+      "settings": {
+        "image": "shopify://shop_images/Smile_Sticker.svg",
+        "animation": "pulse",
+        "animationSpeed": 20,
+        "sticker_align_desktop": "left",
+        "sticker_top_desktop": -165,
+        "sticker_side_desktop": 5,
+        "sticker_width_desktop": 105,
+        "mobile_hide": false,
+        "sticker_align_mobile": "left",
+        "sticker_top_mobile": -75,
+        "sticker_width_mobile": 65,
+        "css_class": "",
+        "custom_css": ""
       }
     }
   },
@@ -655,12 +707,16 @@
     "product_hero_home_CdDEa9",
     "section_multicolumn_DMN9Rc",
     "section_reviews_cY9Cpp",
+    "anchor_link_tyrgYX",
     "section_accordion_group_Bqxp8q",
     "section_rich_text_yDyGBA",
     "static_timeline_gt8nBH",
     "section_social_videos_whTHrV",
     "section_double_XN3kfn",
+    "anchor_link_XmFnqn",
     "section_double_8EWVEV",
-    "section_newsletter_C36BcR"
+    "animated_stickers_pyz8CL",
+    "section_newsletter_C36BcR",
+    "animated_stickers_eez3cM"
   ]
 }
