@@ -372,5 +372,14 @@ p {
         width: 50% !important;
         margin: auto !important;
     }
+
+    .klaviyo-form {
+        input {
+            border-top: 0 !important;
+            border-right: 0 !important;
+            border-left: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
  }
 
