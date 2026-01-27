@@ -289,3 +289,6 @@ p {
     }
  }
 
+ .collection__products {
+    border-bottom: 1px solid #221F1F;
+ }
