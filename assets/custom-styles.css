@@ -348,7 +348,7 @@ p {
 
     .timeline__row {
         margin-left: var(--gap);
-        margin-right: 0;
+        margin-right: 0 !important;
         padding-right: var(--gap);
     }
  }
