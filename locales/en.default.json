@@ -441,7 +441,7 @@
       "complementary_products_title": "Pairs well with",
       "choose_product": "Choose a product",
       "product_info": "Select one from the section settings",
-      "upsell_title": "Complete the look:",
+      "upsell_title": "Complete the Purchase",
       "upsell_add_to_cart": "Add",
       "upsell_out_of_stock": "Out of stock",
       "upsell_error_title": "Choose an upsell product",
@@ -497,7 +497,7 @@
       "taxes_included": "Taxes included.",
       "duties_included": "Duties included.",
       "quantity": {
-        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}<\/span> in cart",
+        "in_cart_html": "<span class=\"quantity-cart\">{{ quantity }}</span> in cart",
         "decrease": "Decrease quantity for {{ product }}",
         "multiples_of": "Increments of {{ quantity }}",
         "minimum_of": "Minimum of {{ quantity }}",
@@ -511,7 +511,7 @@
       },
       "volume_pricing": {
         "price_range": "{{ minimum }} - {{ maximum }}",
-        "price_at_each_html": "at {{ price }}\/ea",
+        "price_at_each_html": "at {{ price }}/ea",
         "title": "Volume Pricing",
         "note": "Volume pricing available"
       },
@@ -532,7 +532,7 @@
   },
   "sections": {
     "quick_order_list": {
-      "each": "{{ money }}\/ea"
+      "each": "{{ money }}/ea"
     }
   },
   "countdown": {
