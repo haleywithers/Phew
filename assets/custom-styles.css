@@ -240,3 +240,16 @@ p {
     padding: 0 !important;
  }
 
+ /*------------------------------------
+ *   PRODUCT TEMPLATE
+ *------------------------------------*/
+
+
+ .template-product {
+
+    .product__description__content {
+        margin-bottom: 2rem;
+    }
+
+ }
+
