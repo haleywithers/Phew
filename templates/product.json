@@ -189,72 +189,90 @@
         "product_sticky_enable": true,
         "variant_image_scroll": true,
         "show_cart_bar": true,
-        "enable_zoom": true,
+        "enable_zoom": false,
         "enable_video_looping": false,
-        "image_layout": "stacked",
+        "image_layout": "thumbnails",
         "image_size": "normal",
-        "mobile_image_style": "slider",
+        "mobile_image_style": "thumbs",
         "color_scheme": "scheme-1",
         "padding_top": 40,
         "padding_bottom": 80
       }
     },
-    "section-announcement": {
-      "type": "section-announcement",
+    "section_accordion_group_46m4pz": {
+      "type": "section-accordion-group",
       "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>•</p>",
-            "text_font_size": "body-x-large",
-            "color": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
-        },
-        "heading": {
+        "heading_fQr4Pi": {
           "type": "heading",
           "settings": {
-            "heading": "Free shipping on orders over $200",
-            "heading_font_size": "heading-x-small"
+            "title": "Good to Know"
           }
         },
-        "text-0": {
-          "type": "text",
+        "question_dQBJMR": {
+          "type": "question",
           "settings": {
-            "text": "<p>•</p>",
-            "text_font_size": "body-x-large",
-            "color": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
+            "default_open": false,
+            "title": "Why are sprays awesome?",
+            "content": "<p>Pills need time. Powders need commitment. Sprays work faster, travel better and don’t need a routine.  A small switch that makes support easier to stick with. Give your supplement shelf a quick glance, how much has been spent on aspirational vitamins? Are they even being absorbed into your body?  Sprays are not magic — it’s just a smarter way to take vitamins.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
           }
         },
-        "heading-0": {
-          "type": "heading",
+        "question_KNJLeq": {
+          "type": "question",
           "settings": {
-            "heading": "1 Year Warranty",
-            "heading_font_size": "heading-x-small"
+            "default_open": false,
+            "title": "How do I use the spray?",
+            "content": "<p>We know you're not an idiot but just to make sure you don't spray it on your pillow, Steady On is an oral vitamin spray that goes directly into your mouth. Ideally under your tongue or inside the cheek. Then breathe and think ‘well done me’. </p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_aMUUyt": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What is in Steady On Oral Spray?",
+            "content": "<p>Steady On is our hero calming oral spray. We spent a long time looking at what ingredients we found actually useful. There’s no room for filler here<strong>.</strong></p><p>Vitamin B6 - Think of this as steady support for busy days. Vitamin B6 helps your nervous system tick along calmly and supports energy when you’re running on fumes.</p><p>Ashwagandha (KSM-66®) - The calm one that knows life’s not getting quieter. Ashwagandha is an adaptogen, which means it helps your body handle stress a little better instead of trying to erase it altogether. KSM-66® is a well-studied form that supports calmer days without making you feel flat or foggy.</p><p>L-Theanine - For when your brain won’t stop chatting. L-Theanine helps take the edge off racing thoughts, supporting a calm, focused feeling without drowsiness. It’s the kind of calm that lets you stay present, not switch off completely.</p><p>Lemon Balm A gentle exhale in plant form. Lemon balm has been used for centuries to support relaxation and ease nervous tension. Soft, soothing and grounding — perfect for those moments when you just need things to feel a bit steadier.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_qbBd4N": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is this for me?",
+            "content": "<p>If you’ve ever thought, “I just need a second”, then this is for you.</p><p>We made Steady On for ourselves because we wanted something simpler — a spray with Vitamin B6 (a real unsung hero) and delicious adaptogens to support full-on days — and we couldn’t find it anywhere.</p><p>It’s not about making stress disappear (we wish), but about feeling calmer, clearer, and more able to deal with what’s in front of you. Big meetings, long to-do lists, or just Tuesday doing its thing.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
           }
         }
       },
       "block_order": [
-        "text",
-        "heading",
-        "text-0",
-        "heading-0"
+        "heading_fQr4Pi",
+        "question_dQBJMR",
+        "question_KNJLeq",
+        "question_aMUUyt",
+        "question_qbBd4N"
       ],
-      "name": "Scrolling text",
+      "name": "Accordion group",
       "settings": {
-        "slider_speed": 7,
-        "text_alignment": "center",
-        "marquee_speed": 100,
-        "direction": "ticker-rtl",
-        "message_spacing": 10,
-        "show_border": false,
-        "layout": "marquee",
+        "heading_font_size": "heading-medium",
+        "question_font_size": "heading-small",
+        "width": "wrapper",
+        "columns": "1",
         "color_scheme": "scheme-2",
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 50,
+        "padding_bottom": 50
       }
     },
     "section-accordion": {
@@ -566,7 +584,7 @@
   "order": [
     "section-divider",
     "product",
-    "section-announcement",
+    "section_accordion_group_46m4pz",
     "section-accordion",
     "section-accordion-0",
     "section-accordion-1",
