@@ -99,7 +99,7 @@
         "settings": {
           "section_text": "#221f1f",
           "section_bg": "#cfc6e3",
-          "section_bg_light": "#cfc6e3",
+          "section_bg_light": "#fff184",
           "section_bg_gradient": "",
           "btn_primary_bg": "#fff184",
           "btn_primary_text": "#221f1f",
