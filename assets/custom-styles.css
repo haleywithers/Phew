@@ -210,8 +210,8 @@ p {
             margin-bottom: 3rem;
         }
 
-        a {
-            text-decoration: none !important;
+        a::after {
+            display: none !important;
         }
 
     }
