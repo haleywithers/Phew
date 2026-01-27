@@ -157,6 +157,16 @@
       gap: 24px;
     }
   }
+
+      @media (max-width: 749px) {
+        .footer-custom__top {
+            grid-template-columns: 1fr !important;
+
+            .footer-custom__right {
+                grid-template-start: 1 !important;
+            }
+        }
+    }
 {%- endstyle -%}
 
 <footer
