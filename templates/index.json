@@ -245,8 +245,8 @@
         "align_columns": "flex-align-top",
         "layout_mobile": "slider",
         "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50,
+        "padding_top": 100,
+        "padding_bottom": 100,
         "heading_tag": "automatic"
       }
     },
@@ -401,6 +401,25 @@
         "overlay_type": "disabled",
         "padding_top": 0,
         "padding_bottom": 74
+      }
+    },
+    "animated_stickers_WJ9kmm": {
+      "type": "animated-stickers",
+      "name": "💫 Animated Sticker",
+      "settings": {
+        "image": "shopify://shop_images/Benefits.png",
+        "animation": "pulse",
+        "animationSpeed": 20,
+        "sticker_align_desktop": "left",
+        "sticker_top_desktop": -30,
+        "sticker_side_desktop": 5,
+        "sticker_width_desktop": 150,
+        "mobile_hide": false,
+        "sticker_align_mobile": "left",
+        "sticker_top_mobile": -20,
+        "sticker_width_mobile": 120,
+        "css_class": "",
+        "custom_css": ""
       }
     },
     "static_timeline_gt8nBH": {
@@ -710,6 +729,7 @@
     "anchor_link_tyrgYX",
     "section_accordion_group_Bqxp8q",
     "section_rich_text_yDyGBA",
+    "animated_stickers_WJ9kmm",
     "static_timeline_gt8nBH",
     "section_social_videos_whTHrV",
     "section_double_XN3kfn",
