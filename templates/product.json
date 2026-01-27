@@ -91,7 +91,7 @@
             "icon_name": "icon-award",
             "icon_size": 20,
             "icon_color": "",
-            "padding_bottom": 24
+            "padding_bottom": 0
           }
         },
         "accordion_RxUnz8": {
@@ -145,7 +145,7 @@
             "icon_name": "icon-award",
             "icon_size": 20,
             "icon_color": "",
-            "padding_bottom": 0
+            "padding_bottom": 30
           }
         },
         "upsell": {

@@ -83,12 +83,6 @@ p {
     padding: .25rem 2.5rem !important;
  }
 
- .product__submit__buttons {
-    .btn__text, .btn__price {
-        font-family: 'HK Grotesk' !important;
-        
-    }
- }
 
 
 /*------------------------------------
@@ -256,7 +250,6 @@ p {
     .product__description__content {
         margin-bottom: 2rem;
     }
-
 
  }
 
