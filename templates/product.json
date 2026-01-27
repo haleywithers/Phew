@@ -196,7 +196,7 @@
           "type": "review",
           "settings": {
             "title": "",
-            "subheading": "Industry Expert",
+            "subheading": "",
             "review_content": "<p>Use this text to showcase a review from one of your customers. A great review is honest and speaks to the concerns of your customers.</p>",
             "review_url": ""
           }
