@@ -243,7 +243,7 @@
         "align_text": "text-center",
         "width": "wrapper--full-padded",
         "align_columns": "flex-align-top",
-        "layout_mobile": "slider",
+        "layout_mobile": "1",
         "color_scheme": "",
         "padding_top": 100,
         "padding_bottom": 100,
