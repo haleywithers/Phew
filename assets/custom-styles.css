@@ -316,5 +316,10 @@ p {
             border-left: 0 !important;
             border-bottom: 1px solid #221F1F;
         }
+
+        button {
+            border-bottom: 1px solid #221F1F !important;
+            text-align: right !important;
+        }
     }
  }
