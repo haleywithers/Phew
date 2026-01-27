@@ -34,9 +34,13 @@
       "name": "Custom footer",
       "settings": {
         "color_scheme": "scheme-2",
+        "footer_vh_desktop": 55,
+        "footer_vh_mobile": 70,
         "bg_image": "shopify://shop_images/squiggle_2.png",
         "bg_height_desktop": 800,
         "bg_height_mobile": 260,
+        "intro_heading": "Stay in the loop",
+        "intro_body": "<p>Subscribe for updates, product drops, and more.</p>",
         "klaviyo_embed": "<div class=\"klaviyo-form-W56ujE\"></div>",
         "menu_1_title": "Explore",
         "menu_1": "",
