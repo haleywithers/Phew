@@ -82,7 +82,13 @@
         data-aos="hero"
         data-aos-anchor="{{ animation_anchor }}"
         data-aos-order="{{ animation_order }}">
-        {%- render 'newsletter-form', block: block -%}
+        {%- if block.settings.klaviyo_embed != blank -%}
+          <div class="newsletter__embed newsletter__embed--klaviyo">
+            {{ block.settings.klaviyo_embed }}
+          </div>
+        {%- else -%}
+          {%- render 'newsletter-form', block: block -%}
+        {%- endif -%}
       </div>
 
       {%- if show_social_links -%}
