@@ -1,0 +1,434 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "subheading_option": "none",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 8
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "text_font_size": "body-small",
+            "padding_bottom": 8
+          }
+        },
+        "description_jYTVXf": {
+          "type": "description",
+          "settings": {
+            "show_read_more": true,
+            "padding_bottom": 0
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "show_quantity": true,
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_dynamic_checkout": false,
+            "button_type_dynamic": "btn--secondary",
+            "button_size_dynamic": "btn--large",
+            "button_style_dynamic": "btn--solid",
+            "show_gift_card_recipient": false,
+            "padding_bottom": 32
+          }
+        },
+        "estimate_delivery_DiXqn4": {
+          "type": "estimate_delivery",
+          "settings": {
+            "label": "Estimated delivery:",
+            "days_from_today": 5,
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        },
+        "accordion_GHeR4n": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "What's inside and how it helps",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.what_s_inside_how_it_helpfs | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion-0": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "How and when to use",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.how_and_when_to_use | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion_RxUnz8": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "Full Ingredients",
+            "heading_font_size": "body-medium",
+            "text": "<p>{{ product.metafields.custom.full_ingredients.value }}</p>",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion_VeyLmk": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "Disclaimer",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.disclaimer | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion_7GW7GR": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "Shipping and Returns",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.shipping_and_returns | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 30
+          }
+        },
+        "upsell": {
+          "type": "upsell",
+          "settings": {
+            "upsell_product": "{{ product.metafields.theme.upsell.value }}",
+            "upsell_product_list": [],
+            "show_available_upsell_only": false,
+            "layout": "stacked",
+            "autoplay": false,
+            "autoplay_speed": 8,
+            "bg_color": "#ffffff",
+            "padding_bottom": 24
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description_jYTVXf",
+        "buttons",
+        "estimate_delivery_DiXqn4",
+        "accordion_GHeR4n",
+        "accordion-0",
+        "accordion_RxUnz8",
+        "accordion_VeyLmk",
+        "accordion_7GW7GR",
+        "upsell"
+      ],
+      "settings": {
+        "product_sticky_enable": true,
+        "variant_image_scroll": true,
+        "show_cart_bar": true,
+        "enable_zoom": false,
+        "enable_video_looping": false,
+        "image_layout": "thumbnails",
+        "image_size": "normal",
+        "mobile_image_style": "thumbs",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 80
+      }
+    },
+    "section_reviews_epURpf": {
+      "type": "section-reviews",
+      "blocks": {
+        "review_hBA3tq": {
+          "type": "review",
+          "settings": {
+            "title": "{{ product.metafields.custom.testimonial_one.value.name.value }}",
+            "subheading": "{{ product.metafields.custom.testimonial_one.value.role.value }}",
+            "review_content": "<p>{{ product.metafields.custom.testimonial_one.value.testimonial.value }}</p>",
+            "featured_image": "{{ product.metafields.custom.testimonial_one.value.photo.value }}",
+            "review_url": ""
+          }
+        },
+        "review_gmYgge": {
+          "type": "review",
+          "settings": {
+            "title": "{{ product.metafields.custom.testimonial_two.value.name.value }}",
+            "subheading": "{{ product.metafields.custom.testimonial_two.value.role.value }}",
+            "review_content": "<p>{{ product.metafields.custom.testimonial_two.value.testimonial.value }}</p>",
+            "featured_image": "{{ product.metafields.custom.testimonial_two.value.photo.value }}",
+            "review_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_hBA3tq",
+        "review_gmYgge"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "show_featured_image": true,
+        "image_aspect_ratio": 1.3,
+        "show_quotation_marks": true,
+        "heading_font_size": "heading-small",
+        "text_align": "text-left",
+        "color_scheme": "scheme-2",
+        "card_bg_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section_multicolumn_pBYXqU": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "icon_dLiKpk": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_one.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_one.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_one.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_B6DTUP": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_two.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_two.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_two.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_Y3cAr4": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_three.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_three.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_three.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_HJgDgU": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_four.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_four.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_four.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "icon_dLiKpk",
+        "icon_B6DTUP",
+        "icon_Y3cAr4",
+        "icon_HJgDgU"
+      ],
+      "name": "Multi column",
+      "settings": {
+        "title": "What's Inside",
+        "heading_font_size": "heading-medium",
+        "description": "",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "slider",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
+    "section_accordion_group_46m4pz": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading_fQr4Pi": {
+          "type": "heading",
+          "settings": {
+            "title": "Good to Know"
+          }
+        },
+        "question_dQBJMR": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Why are sprays awesome?",
+            "content": "<p>Pills need time. Powders need commitment. Sprays work faster, travel better and don’t need a routine.  A small switch that makes support easier to stick with. Give your supplement shelf a quick glance, how much has been spent on aspirational vitamins? Are they even being absorbed into your body?  Sprays are not magic — it’s just a smarter way to take vitamins.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_KNJLeq": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "How do I use the spray?",
+            "content": "<p>We know you're not an idiot but just to make sure you don't spray it on your pillow, Steady On is an oral vitamin spray that goes directly into your mouth. Ideally under your tongue or inside the cheek. Then breathe and think ‘well done me’. </p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_aMUUyt": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What is in Steady On Oral Spray?",
+            "content": "<p>Steady On is our hero calming oral spray. We spent a long time looking at what ingredients we found actually useful. There’s no room for filler here<strong>.</strong></p><p>Vitamin B6 - Think of this as steady support for busy days. Vitamin B6 helps your nervous system tick along calmly and supports energy when you’re running on fumes.</p><p>Ashwagandha (KSM-66®) - The calm one that knows life’s not getting quieter. Ashwagandha is an adaptogen, which means it helps your body handle stress a little better instead of trying to erase it altogether. KSM-66® is a well-studied form that supports calmer days without making you feel flat or foggy.</p><p>L-Theanine - For when your brain won’t stop chatting. L-Theanine helps take the edge off racing thoughts, supporting a calm, focused feeling without drowsiness. It’s the kind of calm that lets you stay present, not switch off completely.</p><p>Lemon Balm A gentle exhale in plant form. Lemon balm has been used for centuries to support relaxation and ease nervous tension. Soft, soothing and grounding — perfect for those moments when you just need things to feel a bit steadier.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_qbBd4N": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is this for me?",
+            "content": "<p>If you’ve ever thought, “I just need a second”, then this is for you.</p><p>We made Steady On for ourselves because we wanted something simpler — a spray with Vitamin B6 (a real unsung hero) and delicious adaptogens to support full-on days — and we couldn’t find it anywhere.</p><p>It’s not about making stress disappear (we wish), but about feeling calmer, clearer, and more able to deal with what’s in front of you. Big meetings, long to-do lists, or just Tuesday doing its thing.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_fQr4Pi",
+        "question_dQBJMR",
+        "question_KNJLeq",
+        "question_aMUUyt",
+        "question_qbBd4N"
+      ],
+      "name": "Accordion group",
+      "settings": {
+        "heading_font_size": "heading-medium",
+        "question_font_size": "heading-small",
+        "width": "wrapper",
+        "columns": "1",
+        "color_scheme": "scheme-2",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "related": {
+      "type": "related",
+      "blocks": {
+        "related-0": {
+          "type": "related",
+          "settings": {
+            "product_recommendations_heading": "Related products"
+          }
+        }
+      },
+      "block_order": [
+        "related-0"
+      ],
+      "settings": {
+        "enable_tabs": true,
+        "heading_alignment": "text-center",
+        "heading_font_size": "heading-small",
+        "limit": 4,
+        "layout_desktop": "slider",
+        "grid": 4,
+        "rows": 3,
+        "layout_mobile": "slider",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "product",
+    "section_reviews_epURpf",
+    "section_multicolumn_pBYXqU",
+    "section_accordion_group_46m4pz",
+    "related"
+  ]
+}
