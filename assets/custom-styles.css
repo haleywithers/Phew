@@ -327,4 +327,14 @@ p {
         list-style: none !important;
         margin: 0 !important;
     }
+
+    @media (max-width: 749px) {
+        .footer-custom__top {
+            grid-template-columns: 1fr;
+
+            .footer-custom__right {
+                grid-template-start: 1;
+            }
+        }
+    }
  }
