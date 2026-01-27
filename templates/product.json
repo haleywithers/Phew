@@ -22,14 +22,6 @@
     "product": {
       "type": "product",
       "blocks": {
-        "badges": {
-          "type": "badges",
-          "settings": {
-            "sale_badge": true,
-            "product_badges": true,
-            "padding_bottom": 8
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -41,92 +33,15 @@
         "price": {
           "type": "price",
           "settings": {
-            "text_font_size": "body-medium",
+            "text_font_size": "body-small",
             "padding_bottom": 8
           }
         },
-        "siblings": {
-          "type": "siblings",
+        "description_jYTVXf": {
+          "type": "description",
           "settings": {
-            "option_font_size": "body-medium",
-            "value_font_size": "body-x-small",
-            "padding_bottom": 16
-          }
-        },
-        "variants": {
-          "type": "variants",
-          "settings": {
-            "info_page": "ring-size-guide",
-            "size_chart_style": "question",
-            "option_font_size": "body-medium",
-            "value_font_size": "body-x-small",
-            "padding_bottom": 16
-          }
-        },
-        "countdown": {
-          "type": "countdown",
-          "settings": {
-            "end_date": "2025-8-30",
-            "end_time": "11:59",
-            "period": "am",
-            "end_message": "<p>Offer has expired</p>",
-            "hide_on_complete": true,
-            "digits_font_size": "heading-small",
-            "text_font_size": "body-x-small",
-            "text": "<p>Our seasonal sale ends soon</p>",
-            "heading_font_size": "heading-x-small",
-            "bg_color": "#e9d2c2",
-            "color": "",
-            "text_align": "text-center",
-            "padding_bottom": 8
-          }
-        },
-        "accordion": {
-          "type": "accordion",
-          "settings": {
-            "style": "drawer",
-            "show_description": true,
-            "show_read_more": false,
-            "default_open": false,
-            "heading": "Description",
-            "heading_font_size": "body-medium",
-            "text": "",
-            "text_font_size": "body-medium",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": "",
-            "padding_bottom": 8
-          }
-        },
-        "accordion-0": {
-          "type": "accordion",
-          "settings": {
-            "style": "drawer",
-            "show_description": false,
-            "show_read_more": false,
-            "default_open": false,
-            "heading": "Details",
-            "heading_font_size": "body-medium",
-            "text": "<p>Each piece in our collection is crafted with intention—balancing timeless design with modern responsibility. We use only high-quality, ethically sourced materials, working closely with skilled artisans who bring every detail to life with care and precision.</p><p>Our commitment to sustainability extends from recycled precious metals to responsible stone sourcing and mindful production practices. Whether it's a gift or a personal keepsake, your jewelry is made to last—and made to matter.</p>",
-            "text_font_size": "body-medium",
-            "show_icon": false,
-            "icon_name": "icon-award",
-            "icon_size": 20,
-            "icon_color": "",
-            "padding_bottom": 24
-          }
-        },
-        "inventory_countdown": {
-          "type": "inventory_countdown",
-          "settings": {
-            "show_notice": "always",
-            "max_inventory": 10,
-            "icon_size": 20,
-            "in_stock_color": "#56ad6a",
-            "low_stock_color": "#f79554",
-            "out_of_stock_color": "#721c24",
-            "padding_bottom": 24
+            "show_read_more": true,
+            "padding_bottom": 0
           }
         },
         "buttons": {
@@ -136,6 +51,7 @@
             "button_type": "btn--black",
             "button_size": "btn--large",
             "button_style": "btn--solid",
+            "show_dynamic_checkout": false,
             "button_type_dynamic": "btn--secondary",
             "button_size_dynamic": "btn--large",
             "button_style_dynamic": "btn--solid",
@@ -143,66 +59,103 @@
             "padding_bottom": 32
           }
         },
-        "pickup": {
-          "type": "pickup",
-          "disabled": true,
+        "estimate_delivery_DiXqn4": {
+          "type": "estimate_delivery",
           "settings": {
-            "padding_bottom": 32
-          }
-        },
-        "icon": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-recycle",
-            "icon_size": 20,
-            "icon_color": "",
-            "text": "<p>Free 30 Days Returns</p>",
-            "text_font_size": "body-small",
-            "width": "full",
-            "padding_bottom": 8
-          }
-        },
-        "icon-0": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-truck",
-            "icon_size": 20,
-            "icon_color": "",
-            "text": "<p>Free shipping on orders over $100</p>",
-            "text_font_size": "body-small",
-            "width": "full",
-            "padding_bottom": 8
-          }
-        },
-        "icon-1": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-donation",
-            "icon_size": 20,
-            "icon_color": "",
-            "text": "<p>1 year warranty</p>",
-            "text_font_size": "body-small",
-            "width": "full",
-            "padding_bottom": 8
-          }
-        },
-        "icon-2": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-flare",
-            "icon_size": 20,
-            "icon_color": "",
-            "text": "<p>14k Solid Gold</p>",
-            "text_font_size": "body-small",
-            "width": "full",
+            "label": "Estimated delivery:",
+            "days_from_today": 5,
+            "text_font_size": "body-medium",
             "padding_bottom": 16
           }
         },
-        "divider": {
-          "type": "divider",
+        "accordion_GHeR4n": {
+          "type": "accordion",
           "settings": {
-            "show_line": true,
-            "padding_bottom": 20
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "What's inside and how it helps",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.what_s_inside_how_it_helpfs | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion-0": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "How and when to use",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.how_and_when_to_use | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 24
+          }
+        },
+        "accordion_RxUnz8": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "Full Ingredients",
+            "heading_font_size": "body-medium",
+            "text": "<p>{{ product.metafields.custom.full_ingredients.value }}</p>",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion_VeyLmk": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "Disclaimer",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.disclaimer | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
+          }
+        },
+        "accordion_7GW7GR": {
+          "type": "accordion",
+          "settings": {
+            "style": "collapsible",
+            "show_description": false,
+            "show_read_more": false,
+            "default_open": false,
+            "heading": "Shipping and Returns",
+            "heading_font_size": "body-medium",
+            "text": "{{ product.metafields.custom.shipping_and_returns | metafield_tag }}",
+            "text_font_size": "body-small",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": "",
+            "padding_bottom": 0
           }
         },
         "upsell": {
@@ -214,51 +167,23 @@
             "layout": "stacked",
             "autoplay": false,
             "autoplay_speed": 8,
-            "bg_color": "",
+            "bg_color": "#ffffff",
             "padding_bottom": 24
-          }
-        },
-        "divider-0": {
-          "type": "divider",
-          "settings": {
-            "show_line": true,
-            "padding_bottom": 16
-          }
-        },
-        "features": {
-          "type": "features",
-          "settings": {
-            "icon_name": "icon-chat",
-            "icon_size": 20,
-            "title": "Need styling help?",
-            "text_font_size": "body-medium",
-            "text": "<p>Book an appointment with our virtual stylists! <a href=\"https://broadcast-theme-main.myshopify.com/pages/contact\" title=\"https://broadcast-theme-main.myshopify.com/pages/contact\">Chat now</a></p>",
-            "bg_color": "#fcfbf9",
-            "color": "",
-            "padding_bottom": 16
           }
         }
       },
       "block_order": [
-        "badges",
         "title",
         "price",
-        "siblings",
-        "variants",
-        "countdown",
-        "accordion",
-        "accordion-0",
-        "inventory_countdown",
+        "description_jYTVXf",
         "buttons",
-        "pickup",
-        "icon",
-        "icon-0",
-        "icon-1",
-        "icon-2",
-        "divider",
-        "upsell",
-        "divider-0",
-        "features"
+        "estimate_delivery_DiXqn4",
+        "accordion_GHeR4n",
+        "accordion-0",
+        "accordion_RxUnz8",
+        "accordion_VeyLmk",
+        "accordion_7GW7GR",
+        "upsell"
       ],
       "settings": {
         "product_sticky_enable": true,
@@ -557,6 +482,7 @@
             "color": "",
             "overlay_type": "disabled",
             "link_text": "Learn more",
+            "link": "",
             "button_type": "btn--white",
             "button_size": "",
             "button_style": "btn--solid",
@@ -577,6 +503,7 @@
             "color": "",
             "overlay_type": "disabled",
             "link_text": "Shop now",
+            "link": "",
             "button_type": "btn--white",
             "button_size": "",
             "button_style": "btn--solid",
