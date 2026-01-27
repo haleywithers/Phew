@@ -16,7 +16,7 @@
   id="StaticTimeline--{{ section.id }}"
   data-section-id="{{ section.id }}"
   data-section-type="timeline"
-  class="static-timeline {{ color_scheme }}"
+  class="static-timeline timeline {{ color_scheme }}"
   style="{{ style }}"
 >
   <div class="static-timeline__container">
@@ -83,106 +83,108 @@
 
     {%- comment -%} MOBILE TIMELINE - Uses theme's timeline classes {%- endcomment -%}
     <div class="static-timeline__mobile">
-      <timeline-component class="timeline__body">
-        {%- if request.design_mode -%}
-          {%- assign blocks_counter_design = 0 -%}
-          {%- for block in section.blocks -%}
-            {%- if block.settings.heading != blank or block.settings.text != blank -%}
-              <div
-                class="timeline__row__editor"
-                data-timeline-row-editor
-                style="--row-count: {{ blocks_counter_design }};"
-                {{ block.shopify_attributes }}
-              >
-                &nbsp;
-              </div>
-              {%- assign blocks_counter_design = blocks_counter_design | plus: 1 -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
+      <div class="timeline__wrapper">
+        <timeline-component class="timeline__body">
+          {%- if request.design_mode -%}
+            {%- assign blocks_counter_design = 0 -%}
+            {%- for block in section.blocks -%}
+              {%- if block.settings.heading != blank or block.settings.text != blank -%}
+                <div
+                  class="timeline__row__editor"
+                  data-timeline-row-editor
+                  style="--row-count: {{ blocks_counter_design }};"
+                  {{ block.shopify_attributes }}
+                >
+                  &nbsp;
+                </div>
+                {%- assign blocks_counter_design = blocks_counter_design | plus: 1 -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
 
-        <div
-          class="timeline__inner"
-          data-timeline-rows
-          data-aos="hero"
-          data-aos-anchor="{{ animation_anchor }}"
-          data-aos-order="{{ animation_order }}"
-          {% if request.design_mode %}
-            data-block-scroll
-          {% endif %}
-        >
-          {%- assign blocks_counter = 0 -%}
-          {%- for block in section.blocks -%}
-            {%- if block.settings.heading != blank or block.settings.text != blank -%}
-              {%- assign blocks_counter = blocks_counter | plus: 1 -%}
-              {%- assign animation_order = animation_order | plus: 1 -%}
-              
-              <div class="timeline__row{% if blocks_counter == 1 %} is-selected{% endif %}" data-timeline-row>
-                <div class="timeline__content">
-                  <div class="timeline__content__outer">
-                    <div
-                      class="timeline__content__inner"
+          <div
+            class="timeline__inner"
+            data-timeline-rows
+            data-aos="hero"
+            data-aos-anchor="{{ animation_anchor }}"
+            data-aos-order="{{ animation_order }}"
+            {% if request.design_mode %}
+              data-block-scroll
+            {% endif %}
+          >
+            {%- assign blocks_counter = 0 -%}
+            {%- for block in section.blocks -%}
+              {%- if block.settings.heading != blank or block.settings.text != blank -%}
+                {%- assign blocks_counter = blocks_counter | plus: 1 -%}
+                {%- assign animation_order = animation_order | plus: 1 -%}
+                
+                <div class="timeline__row{% if blocks_counter == 1 %} is-selected{% endif %}" data-timeline-row>
+                  <div class="timeline__content">
+                    <div class="timeline__content__outer">
+                      <div
+                        class="timeline__content__inner"
+                        data-aos="hero"
+                        data-aos-anchor="{{ animation_anchor }}"
+                        data-aos-order="{{ animation_order }}"
+                        data-target-index="{{ blocks_counter }}"
+                      >
+                        {%- if block.settings.heading != blank -%}
+                          {%- liquid
+                            assign heading_tag = 'h2'
+
+                            unless block.settings.heading_tag == 'automatic' or block.settings.heading_tag == blank
+                              assign heading_tag = block.settings.heading_tag
+                            endunless
+                          -%}
+
+                          <{{ heading_tag }} class="hero__title {{ block.settings.heading_font_size }}">
+                            {{ block.settings.heading }}
+                          </{{ heading_tag }}>
+                        {%- endif -%}
+
+                        {%- if block.settings.text != blank -%}
+                          <div class="hero__rte {{ block.settings.text_font_size }}">
+                            {{ block.settings.text }}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    </div>
+
+                    <span
+                      class="timeline__indicator"
                       data-aos="hero"
                       data-aos-anchor="{{ animation_anchor }}"
                       data-aos-order="{{ animation_order }}"
                       data-target-index="{{ blocks_counter }}"
                     >
-                      {%- if block.settings.heading != blank -%}
-                        {%- liquid
-                          assign heading_tag = 'h2'
+                      <span class="timeline__indicator__line">&nbsp;</span>
+                    </span>
 
-                          unless block.settings.heading_tag == 'automatic' or block.settings.heading_tag == blank
-                            assign heading_tag = block.settings.heading_tag
-                          endunless
-                        -%}
-
-                        <{{ heading_tag }} class="hero__title {{ block.settings.heading_font_size }}">
-                          {{ block.settings.heading }}
-                        </{{ heading_tag }}>
-                      {%- endif -%}
-
-                      {%- if block.settings.text != blank -%}
-                        <div class="hero__rte {{ block.settings.text_font_size }}">
-                          {{ block.settings.text }}
-                        </div>
-                      {%- endif -%}
-                    </div>
-                  </div>
-
-                  <span
-                    class="timeline__indicator"
-                    data-aos="hero"
-                    data-aos-anchor="{{ animation_anchor }}"
-                    data-aos-order="{{ animation_order }}"
-                    data-target-index="{{ blocks_counter }}"
-                  >
-                    <span class="timeline__indicator__line">&nbsp;</span>
-                  </span>
-
-                  <div
-                    class="timeline__dot__wrapper"
-                    data-aos="hero"
-                    data-aos-anchor="{{ animation_anchor }}"
-                    data-aos-order="{{ animation_order }}"
-                    data-target-index="{{ blocks_counter }}"
-                  >
-                    <div class="timeline__dot__holder">
-                      <button
-                        type="button"
-                        class="timeline__dot__button"
-                        aria-label="{{ 'general.accessibility.scroll_to_product' | t }}"
-                        data-timeline-button
-                      >
-                        <span class="timeline__dot">&nbsp;</span>
-                      </button>
+                    <div
+                      class="timeline__dot__wrapper"
+                      data-aos="hero"
+                      data-aos-anchor="{{ animation_anchor }}"
+                      data-aos-order="{{ animation_order }}"
+                      data-target-index="{{ blocks_counter }}"
+                    >
+                      <div class="timeline__dot__holder">
+                        <button
+                          type="button"
+                          class="timeline__dot__button"
+                          aria-label="{{ 'general.accessibility.scroll_to_product' | t }}"
+                          data-timeline-button
+                        >
+                          <span class="timeline__dot">&nbsp;</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </timeline-component>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </timeline-component>
+      </div>
     </div>
   </div>
 </section>
