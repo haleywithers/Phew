@@ -2,6 +2,7 @@
   assign color_scheme = 'color-' | append: section.settings.color_scheme
   assign animation_anchor = '#StaticTimeline--' | append: section.id
   assign animation_order = 0
+  assign dot_background = section.settings.dot_background
 
   capture style
     echo '--PT: ' | append: section.settings.padding_top | append: 'px;'
@@ -42,7 +43,7 @@
 
     {%- comment -%} TIMELINE SIDE {%- endcomment -%}
     <div class="static-timeline__content">
-      <timeline-component class="static-timeline__timeline-wrapper" data-timeline-mobile>
+      <timeline-component class="static-timeline__timeline-wrapper">
         {%- if request.design_mode -%}
           {%- assign blocks_counter_design = 0 -%}
           {%- for block in section.blocks -%}
@@ -60,14 +61,14 @@
           {%- endfor -%}
         {%- endif -%}
 
-        <div class="static-timeline__content-inner" data-timeline-rows>
+        <div class="static-timeline__inner" data-timeline-rows {% if request.design_mode %}data-block-scroll{% endif %}>
           {%- assign blocks_counter = 0 -%}
           {%- for block in section.blocks -%}
             {%- if block.settings.heading != blank or block.settings.text != blank -%}
               {%- assign blocks_counter = blocks_counter | plus: 1 -%}
               
-              <div class="static-timeline__item{% if blocks_counter == 1 %} is-selected{% endif %}" data-timeline-row {{ block.shopify_attributes }}>
-                <div class="static-timeline__item-content">
+              <div class="static-timeline__row timeline__row{% if blocks_counter == 1 %} is-selected{% endif %}" data-timeline-row>
+                <div class="static-timeline__desktop-content">
                   <div class="static-timeline__dot-wrapper">
                     <span class="static-timeline__dot"></span>
                     {%- unless forloop.last -%}
@@ -98,21 +99,47 @@
                   </div>
                 </div>
 
-                {%- comment -%} Timeline indicator for mobile swiper {%- endcomment -%}
-                <span class="static-timeline__indicator" data-target-index="{{ blocks_counter }}">
-                  <span class="static-timeline__indicator-line">&nbsp;</span>
-                </span>
+                {%- comment -%} Mobile timeline structure - matches original timeline {%- endcomment -%}
+                <div class="timeline__content">
+                  <div class="timeline__content__outer">
+                    <div class="timeline__content__inner" data-target-index="{{ blocks_counter }}">
+                      {%- if block.settings.heading != blank -%}
+                        {%- liquid
+                          assign heading_tag = 'h3'
 
-                <div class="static-timeline__dot-mobile-wrapper" data-target-index="{{ blocks_counter }}">
-                  <div class="static-timeline__dot-mobile-holder">
-                    <button
-                      type="button"
-                      class="static-timeline__dot-mobile-button"
-                      aria-label="Scroll to item {{ blocks_counter }}"
-                      data-timeline-button
-                    >
-                      <span class="static-timeline__dot-mobile">&nbsp;</span>
-                    </button>
+                          unless block.settings.heading_tag == 'automatic' or block.settings.heading_tag == blank
+                            assign heading_tag = block.settings.heading_tag
+                          endunless
+                        -%}
+
+                        <{{ heading_tag }} class="hero__title {{ block.settings.heading_font_size }}">
+                          {{ block.settings.heading }}
+                        </{{ heading_tag }}>
+                      {%- endif -%}
+
+                      {%- if block.settings.text != blank -%}
+                        <div class="hero__rte {{ block.settings.text_font_size }}">
+                          {{ block.settings.text }}
+                        </div>
+                      {%- endif -%}
+                    </div>
+                  </div>
+
+                  <span class="timeline__indicator" data-target-index="{{ blocks_counter }}">
+                    <span class="timeline__indicator__line">&nbsp;</span>
+                  </span>
+
+                  <div class="timeline__dot__wrapper" data-target-index="{{ blocks_counter }}">
+                    <div class="timeline__dot__holder">
+                      <button
+                        type="button"
+                        class="timeline__dot__button"
+                        aria-label="Scroll to item {{ blocks_counter }}"
+                        data-timeline-button
+                      >
+                        <span class="timeline__dot">&nbsp;</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -123,6 +150,17 @@
     </div>
   </div>
 </section>
+
+{%- style -%}
+  #StaticTimeline--{{ section.id }} {
+    --counter: {{ blocks_counter }};
+  }
+
+  {%- if dot_background != 'rgba(0,0,0,0)' and dot_background != '' -%}
+    #StaticTimeline--{{ section.id }} .timeline__indicator,
+    #StaticTimeline--{{ section.id }} .timeline__dot { --text: {{ dot_background }}; }
+  {%- endif -%}
+{%- endstyle -%}
 
 <style>
   .static-timeline {
@@ -147,23 +185,21 @@
     max-width: 600px;
   }
 
-  .static-timeline__content-inner {
+  .static-timeline__inner {
     width: 100%;
   }
 
-  .static-timeline__item {
-    display: flex;
-    gap: 2.5rem;
+  .static-timeline__row {
     position: relative;
   }
 
-  .static-timeline__item-content {
+  .static-timeline__desktop-content {
     display: flex;
     gap: 2.5rem;
     width: 100%;
   }
 
-  .static-timeline__item:not(:last-child) {
+  .static-timeline__row:not(:last-child) {
     margin-bottom: 4rem;
   }
 
@@ -243,9 +279,8 @@
     opacity: 0.3;
   }
 
-  /* Hide mobile timeline controls on desktop */
-  .static-timeline__indicator,
-  .static-timeline__dot-mobile-wrapper {
+  /* Hide mobile timeline on desktop */
+  .timeline__content {
     display: none;
   }
 
@@ -266,86 +301,106 @@
       padding: 0;
       order: 2;
       display: block;
+      position: relative;
     }
 
     .static-timeline__timeline-wrapper {
       max-width: 100%;
     }
 
-    .static-timeline__content-inner {
-      position: relative;
+    .static-timeline__inner {
+      display: flex;
       overflow-x: auto;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
-      display: flex;
-      padding: 4rem 0 6rem;
+      padding-bottom: 80px;
     }
 
-    .static-timeline__item {
-      flex: 0 0 calc(100vw - 64px);
+    .static-timeline__row {
+      flex: 0 0 auto;
+      width: calc(100vw - 100px);
       scroll-snap-align: center;
-      margin: 0 32px;
-      flex-direction: column;
+      position: relative;
     }
 
-    .static-timeline__item:not(:last-child) {
+    .static-timeline__row:first-child {
+      margin-left: 32px;
+    }
+
+    .static-timeline__row:last-child {
+      margin-right: 32px;
+    }
+
+    .static-timeline__row:not(:last-child) {
       margin-bottom: 0;
+      margin-right: 50px;
     }
 
-    .static-timeline__item-content {
-      gap: 1.5rem;
-    }
-
-    /* Hide desktop timeline dots/lines on mobile */
-    .static-timeline__dot-wrapper {
+    /* Hide desktop content on mobile */
+    .static-timeline__desktop-content {
       display: none;
     }
 
-    /* Show mobile timeline indicators */
-    .static-timeline__indicator {
+    /* Show mobile timeline structure */
+    .timeline__content {
       display: block;
-      position: absolute;
-      bottom: 2.5rem;
-      left: 32px;
-      right: 32px;
-      height: 2px;
-      background-color: currentColor;
-      opacity: 0.2;
+      position: relative;
     }
 
-    .static-timeline__indicator-line {
+    .timeline__content__outer {
+      padding: 4rem 0 0;
+    }
+
+    .timeline__content__inner {
+      width: 100%;
+    }
+
+    /* Timeline indicator (progress line background) */
+    .timeline__indicator {
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--text, currentColor);
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    .timeline__indicator__line {
       position: absolute;
       left: 0;
       top: 0;
       height: 100%;
-      background-color: currentColor;
-      transition: width 0.3s ease;
       width: 0;
+      background: var(--text, currentColor);
+      transition: width 0.3s ease;
     }
 
-    .static-timeline__item.is-selected .static-timeline__indicator-line {
+    .static-timeline__row.is-selected .timeline__indicator__line {
       width: 100%;
     }
 
-    .static-timeline__dot-mobile-wrapper {
-      display: block;
+    /* Timeline dots */
+    .timeline__dot__wrapper {
       position: absolute;
-      bottom: 1.5rem;
-      left: 32px;
-      right: 32px;
+      bottom: -60px;
+      left: 0;
+      width: 100%;
       height: 20px;
       pointer-events: none;
     }
 
-    .static-timeline__dot-mobile-holder {
+    .timeline__dot__holder {
       position: relative;
       height: 100%;
+      width: 100%;
     }
 
-    .static-timeline__dot-mobile-button {
+    .timeline__dot__button {
       position: absolute;
-      left: 0;
+      left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
       padding: 10px;
@@ -353,19 +408,14 @@
       border: none;
       cursor: pointer;
       pointer-events: auto;
-      transition: left 0.3s ease;
     }
 
-    .static-timeline__dot-mobile {
+    .timeline__dot {
       display: block;
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background-color: currentColor;
-    }
-
-    .static-timeline__text {
-      padding-top: 0;
+      background: var(--text, currentColor);
     }
   }
 </style>
@@ -393,6 +443,12 @@
       "id": "color_scheme",
       "default": "scheme_1",
       "label": "Color scheme"
+    },
+    {
+      "type": "color",
+      "id": "dot_background",
+      "label": "Hotspot color",
+      "info": "Changes the color of the timeline dots and progress line"
     },
     {
       "type": "header",
