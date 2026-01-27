@@ -90,8 +90,12 @@ p {
 }
 
 .accordion-group__items {
-    border-top: 0;
-    border-bottom: 1px solid #221F1F;
+
+    .accordion {
+        border-bottom: 1px solid #221F1F;
+        border-top: 0 !important;
+    }
+
 }
 
 /*------------------------------------
