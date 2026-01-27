@@ -3,6 +3,12 @@
   assign bg_height_desktop = section.settings.bg_height_desktop
   assign bg_height_mobile = section.settings.bg_height_mobile
 
+  assign footer_vh_desktop = section.settings.footer_vh_desktop
+  assign footer_vh_mobile = section.settings.footer_vh_mobile
+
+  assign intro_heading = section.settings.intro_heading
+  assign intro_body = section.settings.intro_body
+
   assign logo_full = section.settings.logo_full
 
   assign menu_1 = section.settings.menu_1
@@ -23,6 +29,9 @@
   #FooterCustom-{{ section.id }} {
     position: relative;
     overflow: hidden;
+
+    /* Client-controlled height */
+    min-height: {{ footer_vh_desktop }}vh;
   }
 
   /* Background image pinned to bottom, full-width */
@@ -44,6 +53,7 @@
   #FooterCustom-{{ section.id }} .footer-custom__inner {
     position: relative;
     z-index: 1;
+    height: 100%;
   }
 
   /* Spacing so content doesn't sit on the bg image */
@@ -78,34 +88,53 @@
     margin: 0 0 12px 0;
   }
 
+  /* Intro copy above form/embed */
+  #FooterCustom-{{ section.id }} .footer-custom__intro {
+    margin-bottom: 16px;
+  }
+  #FooterCustom-{{ section.id }} .footer-custom__intro h3 {
+    margin: 0 0 8px 0;
+  }
+  #FooterCustom-{{ section.id }} .footer-custom__intro .rte {
+    margin: 0;
+  }
+
   /* Socials under newsletter/embed */
   #FooterCustom-{{ section.id }} .footer-custom__socials {
     margin-top: 16px;
   }
 
-  /* Row 2 full-width logo */
+  /* Row 2 logo inside container (respects margins) */
   #FooterCustom-{{ section.id }} .footer-custom__logo-full {
     margin-top: 36px;
   }
   #FooterCustom-{{ section.id }} .footer-custom__logo-full img {
-    width: 100vw;
-    max-width: none;
+    width: 100%;
     height: auto;
     display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   /* Row 3 bottom bar */
   #FooterCustom-{{ section.id }} .footer-custom__bottom {
     margin-top: 24px;
     padding-top: 16px;
+
     display: flex;
     justify-content: space-between;
     gap: 16px;
     flex-wrap: wrap;
     align-items: center;
+  }
+
+  /* Full-width border-top above credits row */
+  #FooterCustom-{{ section.id }} .footer-custom__divider {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid currentColor;
+    opacity: 1;
+    margin-top: 24px;
   }
 
   /* Klaviyo embed should not overflow */
@@ -117,6 +146,10 @@
   }
 
   @media (max-width: 749px) {
+    #FooterCustom-{{ section.id }} {
+      min-height: {{ footer_vh_mobile }}vh;
+    }
+
     #FooterCustom-{{ section.id }} .footer-custom__bg {
       height: {{ bg_height_mobile }}px;
     }
@@ -158,6 +191,17 @@
     <!-- ROW 1 -->
     <div class="footer-custom__top">
       <div class="footer-custom__left">
+        {%- if intro_heading != blank or intro_body != blank -%}
+          <div class="footer-custom__intro">
+            {%- if intro_heading != blank -%}
+              <h3 class="footer-custom__heading">{{ intro_heading | escape }}</h3>
+            {%- endif -%}
+            {%- if intro_body != blank -%}
+              <div class="rte">{{ intro_body }}</div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
         {%- if klaviyo_embed != blank -%}
           <div class="footer-custom__embed">
             {{ klaviyo_embed }}
@@ -166,10 +210,6 @@
           {%- if newsletter_block != blank -%}
             {%- render 'newsletter-form', block: newsletter_block, show_discount_message: false, success_text: '', small_newsletter: false -%}
           {%- else -%}
-            {%- comment -%}
-              If no block exists, show a tiny fallback.
-              (Ideally keep the newsletter block enabled in this section.)
-            {%- endcomment -%}
             <p>{{ 'general.newsletter_form.newsletter_email' | t }}</p>
           {%- endif -%}
         {%- endif -%}
@@ -218,7 +258,7 @@
       </div>
     </div>
 
-    <!-- ROW 2 -->
+    <!-- ROW 2 (inside container) -->
     {%- if logo_full != blank -%}
       <div class="footer-custom__logo-full">
         <img
@@ -235,6 +275,9 @@
         >
       </div>
     {%- endif -%}
+
+    <!-- Full-width border above credits row -->
+    <div class="footer-custom__divider" aria-hidden="true"></div>
 
     <!-- ROW 3 -->
     <div class="footer-custom__bottom">
@@ -269,6 +312,30 @@
     },
     {
       "type": "header",
+      "content": "Footer height"
+    },
+    {
+      "type": "range",
+      "id": "footer_vh_desktop",
+      "label": "Minimum height (desktop)",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "vh",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "footer_vh_mobile",
+      "label": "Minimum height (mobile)",
+      "min": 20,
+      "max": 140,
+      "step": 5,
+      "unit": "vh",
+      "default": 70
+    },
+    {
+      "type": "header",
       "content": "Background image"
     },
     {
@@ -296,6 +363,22 @@
       "step": 20,
       "unit": "px",
       "default": 260
+    },
+    {
+      "type": "header",
+      "content": "Left column intro"
+    },
+    {
+      "type": "text",
+      "id": "intro_heading",
+      "label": "Heading",
+      "default": "Stay in the loop"
+    },
+    {
+      "type": "richtext",
+      "id": "intro_body",
+      "label": "Body copy",
+      "default": "<p>Subscribe for updates, product drops, and more.</p>"
     },
     {
       "type": "header",
@@ -336,8 +419,8 @@
     {
       "type": "image_picker",
       "id": "logo_full",
-      "label": "Full-width logo image",
-      "info": "Displayed at 100vw."
+      "label": "Logo image (inside site margins)",
+      "info": "Displayed at 100% width of the content container."
     },
     {
       "type": "header",
