@@ -322,4 +322,8 @@ p {
             text-align: right !important;
         }
     }
+
+    .footer-custom__menu {
+        list-style: none !important;
+    }
  }
