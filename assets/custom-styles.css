@@ -357,4 +357,8 @@ p {
     .static-timeline__item {
         margin-bottom: 0 !important;
     }
+
+    .static-timeline__line {
+        margin-top: 0 !important;
+    }
  }
