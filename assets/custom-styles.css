@@ -83,6 +83,8 @@ p {
     padding: .25rem 2.5rem !important;
  }
 
+
+
 /*------------------------------------
  *   HERO
  *------------------------------------*/
@@ -196,12 +198,20 @@ p {
     }
 }
 
+ /*------------------------------------
+ *   PRODCUT HERO
+ *------------------------------------*/
+
 
 .product-hero-section__container {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     min-height: 75vh !important;
 }
+
+ /*------------------------------------
+ *   SOCIAL
+ *------------------------------------*/
 
 
 @media (max-width:749px) {
@@ -222,4 +232,13 @@ p {
     }
 }
 
+ /*------------------------------------
+ *   ABOUT
+ *------------------------------------*/
+
+ .about-hero {
+    .brick__block__text {
+        padding: 0 !important;
+    }
+ }
 
