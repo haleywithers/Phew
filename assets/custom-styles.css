@@ -364,3 +364,13 @@ p {
         opacity: 1 !important;
     }
  }
+
+
+
+
+ .newsletter__embed.newsletter__embed--klaviyo {
+    .form {
+        width: 50% !important;
+        margin: auto !important;
+    }
+ }
