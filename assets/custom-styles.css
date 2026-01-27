@@ -360,5 +360,7 @@ p {
 
     .static-timeline__line {
         margin-top: 0 !important;
+        width: 1px !important;
+        opacity: 1 !important;
     }
  }
