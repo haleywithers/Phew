@@ -293,7 +293,9 @@ p {
     border-bottom: 1px solid #221F1F;
  }
 
-
+ /*------------------------------------
+ *  KLAYVIO
+ *------------------------------------*/
 
  footer {
     .container {
@@ -329,4 +331,18 @@ p {
     }
 
 
+ }
+
+  /*------------------------------------
+ *   TIMELINE
+ *------------------------------------*/
+
+ @media (max-width:749px) {
+    .timeline__inner {
+        padding-top: 4rem;
+    }
+
+    .static-timeline__image-side {
+        min-height:50vh !important;
+    }
  }
