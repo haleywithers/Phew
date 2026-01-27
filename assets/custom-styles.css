@@ -214,6 +214,11 @@ p {
             display: none !important;
         }
 
+        .grid__heading {
+            width: 75%;
+            margin: auto;
+        }
+
     }
 }
 
