@@ -128,6 +128,14 @@ h1, h2, h3, h4, h5 {
     text-transform: none;
  }
 
+ @media (max-width: 749px) {
+    .section-columns {
+        .grid__heading {
+            margin-bottom: 2rem;
+        }
+    }
+ }
+
  /*------------------------------------
  *   TESTIMONIALS
  *------------------------------------*/
