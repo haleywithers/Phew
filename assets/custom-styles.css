@@ -236,9 +236,7 @@ p {
  *   ABOUT
  *------------------------------------*/
 
- .about-hero {
-    .brick__block__text {
-        padding: 0 !important;
-    }
+ .about-section .brick__block__text {
+    padding: 0 !important;
  }
 
