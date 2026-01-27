@@ -44,7 +44,7 @@
         "image_1": "shopify://shop_images/2ea52648d1644c00071518dae79ccd239d609764.jpg",
         "link": "",
         "width": "wrapper--full",
-        "height": "screen-height-two-thirds",
+        "height": "screen-height-one-half",
         "flex_align_desktop": "align--bottom-left-desktop",
         "content_width": 50,
         "mobile_height": "screen-height-three-quarters--mobile",
@@ -84,7 +84,7 @@
       ],
       "name": "Scrolling text",
       "settings": {
-        "slider_speed": 7,
+        "slider_speed": 5,
         "text_alignment": "center",
         "marquee_speed": 100,
         "direction": "ticker-rtl",
