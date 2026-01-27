@@ -63,10 +63,9 @@
 
   /* Row 1 layout */
   #FooterCustom-{{ section.id }} .footer-custom__top {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
   }
   #FooterCustom-{{ section.id }} .footer-custom__left {
     flex: 1 1 320px;
@@ -78,6 +77,7 @@
     display: flex;
     justify-content: space-between;
     gap: 32px;
+    grid-column-start: 3;
   }
   #FooterCustom-{{ section.id }} .footer-custom__menu-col {
     flex: 1 1 160px;
