@@ -42,7 +42,13 @@
   assign secondary_menu_linklist = section.settings.secondary_menu_linklist
 
   assign logo = section.settings.logo
+  assign logo_home = section.settings.logo_home
   assign transparent_logo = section.settings.transparent_logo
+
+  if template.name == 'index' and logo_home != blank
+    assign logo = logo_home
+  endif
+
 
   if template.name == 'product' and section.settings.transparent_product_page
     assign transparent_logo = section.settings.transparent_logo_pdp
@@ -684,6 +690,13 @@
       "label": "Image",
       "info": "300 x 90px .jpg recommended. [Learn more](http://presidiodev.com/link/broadcast/images)"
     },
+    {
+      "type": "image_picker",
+      "id": "logo_home",
+      "label": "Home page logo (override)",
+      "info": "If set, this logo will be used on the home page only."
+    },
+
     {
       "type": "header",
       "content": "Layout"
