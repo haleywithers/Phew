@@ -11,6 +11,42 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "phew_footer_aRyFmT": {
+      "type": "phew-footer",
+      "blocks": {
+        "newsletter_KWjrQm": {
+          "type": "newsletter",
+          "settings": {
+            "show_name": false,
+            "button_text": "Subscribe",
+            "button_type": "btn--primary",
+            "button_size": "btn--small",
+            "button_style": "btn--solid",
+            "show_arrow": true,
+            "terms": false,
+            "color": ""
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_KWjrQm"
+      ],
+      "name": "Custom footer",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "bg_image": "shopify://shop_images/squiggle_2.png",
+        "bg_height_desktop": 800,
+        "bg_height_mobile": 260,
+        "klaviyo_embed": "<div class=\"klaviyo-form-W56ujE\"></div>",
+        "menu_1_title": "Explore",
+        "menu_1": "",
+        "menu_2_title": "Info",
+        "menu_2": "",
+        "logo_full": "shopify://shop_images/Phew_Logo.svg",
+        "credits_label": "Credits",
+        "credits_url": ""
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -95,6 +131,7 @@
     }
   },
   "order": [
+    "phew_footer_aRyFmT",
     "footer",
     "section-anchor-logo",
     "section-supporting-menu"
