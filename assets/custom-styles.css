@@ -299,4 +299,7 @@ p {
     .container {
         padding: var(--gutter) var(--outer);
     }
+    .footer-custom__bottom {
+        justify-content: center !importatn;
+    }
  }
