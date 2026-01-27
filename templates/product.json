@@ -9,16 +9,6 @@
  */
 {
   "sections": {
-    "section-divider": {
-      "type": "section-divider",
-      "settings": {
-        "show_line": true,
-        "width": "wrapper--full",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "product": {
       "type": "product",
       "blocks": {
@@ -48,8 +38,8 @@
           "type": "buttons",
           "settings": {
             "show_quantity": true,
-            "button_type": "btn--black",
-            "button_size": "btn--large",
+            "button_type": "btn--primary",
+            "button_size": "",
             "button_style": "btn--solid",
             "show_dynamic_checkout": false,
             "button_type_dynamic": "btn--secondary",
@@ -199,6 +189,55 @@
         "padding_bottom": 80
       }
     },
+    "section_reviews_epURpf": {
+      "type": "section-reviews",
+      "blocks": {
+        "review_hBA3tq": {
+          "type": "review",
+          "settings": {
+            "title": "",
+            "subheading": "Industry Expert",
+            "review_content": "<p>Use this text to showcase a review from one of your customers. A great review is honest and speaks to the concerns of your customers.</p>",
+            "review_url": ""
+          }
+        },
+        "review_gmYgge": {
+          "type": "review",
+          "settings": {
+            "title": "Willy Bridge",
+            "subheading": "Industry Expert",
+            "review_content": "<p>Use this text to showcase a review from one of your customers. A great review is honest and speaks to the concerns of your customers.</p>",
+            "review_url": ""
+          }
+        },
+        "review_yMaYkb": {
+          "type": "review",
+          "settings": {
+            "title": "Kenneth Powell",
+            "subheading": "Industry Expert",
+            "review_content": "<p>Use this text to showcase a review from one of your customers. A great review is honest and speaks to the concerns of your customers.</p>",
+            "review_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_hBA3tq",
+        "review_gmYgge",
+        "review_yMaYkb"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "show_featured_image": true,
+        "image_aspect_ratio": 1.3,
+        "show_quotation_marks": true,
+        "heading_font_size": "heading-small",
+        "text_align": "text-left",
+        "color_scheme": "scheme-2",
+        "card_bg_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
     "section_multicolumn_pBYXqU": {
       "type": "section-multicolumn",
       "blocks": {
@@ -275,7 +314,7 @@
       ],
       "name": "Multi column",
       "settings": {
-        "title": "",
+        "title": "What's Inside",
         "heading_font_size": "heading-medium",
         "description": "",
         "align_heading": "text-center",
@@ -363,47 +402,6 @@
         "color_scheme": "scheme-2",
         "padding_top": 100,
         "padding_bottom": 100
-      }
-    },
-    "section-hero": {
-      "type": "section-hero",
-      "blocks": {
-        "heading-1": {
-          "type": "heading",
-          "settings": {
-            "title": "Recycled Materials",
-            "heading_font_size": "heading-medium",
-            "heading_tag": "automatic",
-            "padding_bottom": 8
-          }
-        },
-        "text-5": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We partner with high quality jewellers who only use recycled gold, AAA-grade gemstones, and ethically sourced diamonds.</p>",
-            "text_font_size": "body-medium",
-            "padding_bottom": 8
-          }
-        }
-      },
-      "block_order": [
-        "heading-1",
-        "text-5"
-      ],
-      "settings": {
-        "link": "",
-        "width": "wrapper--full",
-        "height": "five-fifty-height-hero",
-        "flex_align_desktop": "align--middle-center-desktop",
-        "content_width": 50,
-        "mobile_height": "screen-height-three-quarters--mobile",
-        "flex_align_mobile": "align--middle-center-mobile",
-        "color_scheme": "scheme-2",
-        "show_text_background": false,
-        "overlay_type": "disabled",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_placeholder": true
       }
     },
     "section-custom-content": {
@@ -504,11 +502,10 @@
     }
   },
   "order": [
-    "section-divider",
     "product",
+    "section_reviews_epURpf",
     "section_multicolumn_pBYXqU",
     "section_accordion_group_46m4pz",
-    "section-hero",
     "section-custom-content",
     "related"
   ]
