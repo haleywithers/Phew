@@ -363,8 +363,8 @@
         "width": "wrapper",
         "columns": "1",
         "color_scheme": "",
-        "padding_top": 50,
-        "padding_bottom": 50
+        "padding_top": 97,
+        "padding_bottom": 40
       }
     },
     "section_rich_text_yDyGBA": {
@@ -393,7 +393,66 @@
         "color_scheme": "",
         "overlay_type": "disabled",
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 74
+      }
+    },
+    "static_timeline_gt8nBH": {
+      "type": "static-timeline",
+      "blocks": {
+        "timeline_item_R97W7p": {
+          "type": "timeline_item",
+          "settings": {
+            "heading": "Real Life Ready",
+            "heading_font_size": "heading-medium",
+            "text": "<p>Small enough to live in your bag, quick enough to use in the middle of everything, strong enough that you notice the difference</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "timeline_item_wgpD7C": {
+          "type": "timeline_item",
+          "settings": {
+            "heading": "Better Absorption",
+            "heading_font_size": "heading-medium",
+            "text": "<p>Vitamin sprays go straight into the bloodstream so are 2.6 times more effective than tablets and capsules. Say what????</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "timeline_item_kaNXch": {
+          "type": "timeline_item",
+          "settings": {
+            "heading": "Soooooo Easy",
+            "heading_font_size": "heading-medium",
+            "text": "<p>Zero Faff. Open mouth and spray. No psyching yourself up to swallow that capsule.  Feeling better already? </p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "timeline_item_gy8eWx": {
+          "type": "timeline_item",
+          "settings": {
+            "heading": "Longer Lasting",
+            "heading_font_size": "heading-medium",
+            "text": "<p>Our fancy airless bottles last longer. The good stuff stays good, even if lost in a drawer for three months. </p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "timeline_item_R97W7p",
+        "timeline_item_wgpD7C",
+        "timeline_item_kaNXch",
+        "timeline_item_gy8eWx"
+      ],
+      "name": "Static Timeline",
+      "settings": {
+        "image": "shopify://shop_images/27ff8831e3f66c25ff80da9b794971db77150a9e.png",
+        "color_scheme": "scheme-2",
+        "dot_background": "",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "section_social_videos_whTHrV": {
@@ -598,6 +657,7 @@
     "section_reviews_cY9Cpp",
     "section_accordion_group_Bqxp8q",
     "section_rich_text_yDyGBA",
+    "static_timeline_gt8nBH",
     "section_social_videos_whTHrV",
     "section_double_XN3kfn",
     "section_double_8EWVEV",
