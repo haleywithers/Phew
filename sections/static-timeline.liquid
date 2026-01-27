@@ -1,0 +1,361 @@
+{%- liquid
+  assign color_scheme = 'color-' | append: section.settings.color_scheme
+  assign animation_anchor = '#StaticTimeline--' | append: section.id
+  assign animation_order = 0
+
+  capture style
+    echo '--PT: ' | append: section.settings.padding_top | append: 'px;'
+    echo '--PB: ' | append: section.settings.padding_bottom | append: 'px;'
+  endcapture
+-%}
+
+<section
+  id="StaticTimeline--{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  class="static-timeline {{ color_scheme }}"
+  style="{{ style }}"
+>
+  <div class="static-timeline__container">
+    {%- comment -%} TIMELINE SIDE {%- endcomment -%}
+    <div class="static-timeline__content">
+      <div class="static-timeline__content-inner">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.heading != blank or block.settings.text != blank -%}
+            <div class="static-timeline__item" {{ block.shopify_attributes }}>
+              <div class="static-timeline__dot-wrapper">
+                <span class="static-timeline__dot"></span>
+                {%- unless forloop.last -%}
+                  <span class="static-timeline__line"></span>
+                {%- endunless -%}
+              </div>
+              
+              <div class="static-timeline__text">
+                {%- if block.settings.heading != blank -%}
+                  {%- liquid
+                    assign heading_tag = 'h3'
+
+                    unless block.settings.heading_tag == 'automatic' or block.settings.heading_tag == blank
+                      assign heading_tag = block.settings.heading_tag
+                    endunless
+                  -%}
+
+                  <{{ heading_tag }} class="static-timeline__heading {{ block.settings.heading_font_size }}">
+                    {{ block.settings.heading }}
+                  </{{ heading_tag }}>
+                {%- endif -%}
+
+                {%- if block.settings.text != blank -%}
+                  <div class="static-timeline__body {{ block.settings.text_font_size }} rte">
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- comment -%} IMAGE SIDE {%- endcomment -%}
+    <div class="static-timeline__image-side">
+      {%- if section.settings.image != blank -%}
+        <div class="static-timeline__image-wrapper">
+          <img 
+            src="{{ section.settings.image | image_url: width: 1200 }}"
+            srcset="{{ section.settings.image | image_url: width: 500 }} 500w,
+                    {{ section.settings.image | image_url: width: 750 }} 750w,
+                    {{ section.settings.image | image_url: width: 1000 }} 1000w,
+                    {{ section.settings.image | image_url: width: 1200 }} 1200w"
+            sizes="50vw"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy">
+        </div>
+      {%- else -%}
+        <div class="static-timeline__placeholder">
+          {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<style>
+  .static-timeline {
+    width: 100%;
+  }
+
+  .static-timeline__container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .static-timeline__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 4rem;
+  }
+
+  .static-timeline__content-inner {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .static-timeline__item {
+    display: flex;
+    gap: 2.5rem;
+    position: relative;
+  }
+
+  .static-timeline__item:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  .static-timeline__dot-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .static-timeline__dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: currentColor;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  .static-timeline__line {
+    width: 2px;
+    flex: 1;
+    background-color: currentColor;
+    margin-top: 0.5rem;
+    opacity: 0.3;
+  }
+
+  .static-timeline__text {
+    flex: 1;
+    padding-top: 0;
+  }
+
+  .static-timeline__heading {
+    font-family: 'American Grotesk', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+  }
+
+  .static-timeline__body {
+    font-family: 'HK Grotesk', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .static-timeline__image-side {
+    width: 50vw;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .static-timeline__image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .static-timeline__image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .static-timeline__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: 768px) {
+    .static-timeline__container {
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    .static-timeline__content {
+      padding: 4rem 2rem;
+    }
+
+    .static-timeline__item {
+      gap: 1.5rem;
+    }
+
+    .static-timeline__item:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    .static-timeline__image-side {
+      width: 100%;
+      min-height: 50vh;
+      position: relative;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Static Timeline",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme_1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom",
+      "default": 0
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "timeline_item",
+      "name": "Timeline Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Timeline Point"
+        },
+        {
+          "type": "select",
+          "id": "heading_font_size",
+          "label": "Heading size",
+          "default": "heading-medium",
+          "options": [
+            {"value": "heading-mini", "label": "Mini"},
+            {"value": "heading-x-small", "label": "Extra small"},
+            {"value": "heading-small", "label": "Small"},
+            {"value": "heading-medium", "label": "Medium"},
+            {"value": "heading-large", "label": "Large"},
+            {"value": "heading-x-large", "label": "Extra large"}
+          ]
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add your timeline description here.</p>"
+        },
+        {
+          "type": "select",
+          "id": "text_font_size",
+          "label": "Text size",
+          "default": "body-medium",
+          "options": [
+            {"value": "body-x-small", "label": "Extra small"},
+            {"value": "body-small", "label": "Small"},
+            {"value": "body-medium", "label": "Medium"},
+            {"value": "body-large", "label": "Large"},
+            {"value": "body-x-large", "label": "Extra large"}
+          ]
+        },
+        {
+          "type": "header",
+          "content": "Advanced"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading SEO tag",
+          "default": "automatic",
+          "options": [
+            {"value": "automatic", "label": "Automatic"},
+            {"value": "h1", "label": "H1"},
+            {"value": "h2", "label": "H2"},
+            {"value": "h3", "label": "H3"},
+            {"value": "h4", "label": "H4"},
+            {"value": "h5", "label": "H5"},
+            {"value": "h6", "label": "H6"}
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Static Timeline",
+      "blocks": [
+        {
+          "type": "timeline_item",
+          "settings": {
+            "heading": "Step One",
+            "text": "<p>Describe the first milestone here.</p>"
+          }
+        },
+        {
+          "type": "timeline_item",
+          "settings": {
+            "heading": "Step Two",
+            "text": "<p>Describe the second milestone here.</p>"
+          }
+        },
+        {
+          "type": "timeline_item",
+          "settings": {
+            "heading": "Step Three",
+            "text": "<p>Describe the third milestone here.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
