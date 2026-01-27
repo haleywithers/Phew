@@ -199,6 +199,96 @@
         "padding_bottom": 80
       }
     },
+    "section_multicolumn_pBYXqU": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "icon_dLiKpk": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_one.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_one.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_one.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_B6DTUP": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_two.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_two.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_two.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_Y3cAr4": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_three.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_three.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_three.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_HJgDgU": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-shield",
+            "image": "{{ product.metafields.custom.ingredient_four.value.image.value }}",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "{{ product.metafields.custom.ingredient_four.value.name.value }}",
+            "heading_font_size": "heading-small",
+            "text": "<p>{{ product.metafields.custom.ingredient_four.value.description.value }}</p>",
+            "text_font_size": "body-small",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "icon_dLiKpk",
+        "icon_B6DTUP",
+        "icon_Y3cAr4",
+        "icon_HJgDgU"
+      ],
+      "name": "Multi column",
+      "settings": {
+        "title": "",
+        "heading_font_size": "heading-medium",
+        "description": "",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "slider",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
     "section_accordion_group_46m4pz": {
       "type": "section-accordion-group",
       "blocks": {
@@ -271,176 +361,8 @@
         "width": "wrapper",
         "columns": "1",
         "color_scheme": "scheme-2",
-        "padding_top": 50,
-        "padding_bottom": 50
-      }
-    },
-    "section-accordion": {
-      "type": "section-accordion",
-      "blocks": {
-        "text-1": {
-          "type": "text",
-          "settings": {
-            "title": "How do I take care of my jewelry?",
-            "heading_font_size": "heading-x-small",
-            "text": "<p><em><strong>14K Gold </strong></em></p><p>Scrub lightly with a fresh toothbrush and warm water. You can also buff your pieces using the cloth included in your order.</p><p><br/><em><strong>Sterling Silver</strong></em></p><p>Gently rub the surface with the  cloth included in your order.</p>"
-          }
-        },
-        "text-2": {
-          "type": "text",
-          "settings": {
-            "title": "Do you have a warranty?",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Yes! For 3 years from the date of purchase, we’ll take care of your product if any damage to the material  occurs. Simply <a href=\"/pages/contact\" title=\"Contact\">contact us</a> and we’ll send you a replacement.</p><p>Please note: This warranty does not cover lost items, scratches that come with normal wear and tear, improper use or storage of your product, and any modification to your product done by a third party.</p>"
-          }
-        },
-        "text-3": {
-          "type": "text",
-          "settings": {
-            "title": "How do I use the polishing cloth?",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Gently rub the surface of your piece with the polishing cloth. Never wash the polishing cloth as it will lose its effectiveness, and keep out of reach of children!</p>"
-          }
-        },
-        "text-4": {
-          "type": "text",
-          "settings": {
-            "title": "Do you create custom pieces?",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>We're not able to build custom pieces at this time. </p>"
-          }
-        }
-      },
-      "block_order": [
-        "text-1",
-        "text-2",
-        "text-3",
-        "text-4"
-      ],
-      "settings": {
-        "default_open": false,
-        "title": "Care Instructions",
-        "heading_font_size": "heading-x-small",
-        "show_icon": false,
-        "icon_name": "icon-award",
-        "icon_size": 20,
-        "width": "wrapper",
-        "color_scheme": "",
-        "icon_color": "",
-        "padding_top": 80,
-        "padding_bottom": 0
-      }
-    },
-    "section-accordion-0": {
-      "type": "section-accordion",
-      "blocks": {
-        "icon-3": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-green-shipment",
-            "icon_size": 20,
-            "icon_color": "",
-            "title": "International Shipping",
-            "heading_font_size": "heading-x-small",
-            "icon_alignment": "left",
-            "text": "<p>We are happy to announce we officially ship internationally! All orders are dispatched from our US warehouse within 2 - 3 business days.</p>",
-            "text_alignment": "text-left"
-          }
-        },
-        "icon-4": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-location",
-            "icon_size": 20,
-            "icon_color": "",
-            "title": "Order tracking",
-            "heading_font_size": "heading-x-small",
-            "icon_alignment": "left",
-            "text": "<p>Tracking numbers are automatically sent as soon as your order is packed. Please check your junk folder if you do not receive one 72hrs after placing your order.</p>",
-            "text_alignment": "text-left"
-          }
-        },
-        "icon-5": {
-          "type": "icon",
-          "settings": {
-            "icon_name": "icon-chat",
-            "icon_size": 20,
-            "icon_color": "",
-            "title": "Get in touch",
-            "heading_font_size": "heading-x-small",
-            "icon_alignment": "left",
-            "text": "<p>If you have any questions about your order, please <a href=\"/pages/contact\" title=\"Contact\">contact us</a>. Our customer service is available Monday through Friday from 8am until 5pm est.</p>",
-            "text_alignment": "text-left"
-          }
-        }
-      },
-      "block_order": [
-        "icon-3",
-        "icon-4",
-        "icon-5"
-      ],
-      "settings": {
-        "default_open": false,
-        "title": "Shipping  & Returns",
-        "heading_font_size": "heading-x-small",
-        "show_icon": false,
-        "icon_name": "icon-award",
-        "icon_size": 20,
-        "width": "wrapper",
-        "color_scheme": "",
-        "icon_color": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "section-accordion-1": {
-      "type": "section-accordion",
-      "blocks": {
-        "image": {
-          "type": "image",
-          "settings": {
-            "title": "Sustainable sourcing",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>We are committed to quality products that are manufactured ethically and sustainably. All of our pieces are traceable throughout the supply chain. We strive to ensure our products contribute to the well-being of people and planet, and our efforts put us on track towards a brighter future.</p>",
-            "aspect_ratio": 0.6
-          }
-        },
-        "image-0": {
-          "type": "image",
-          "settings": {
-            "title": "Ethical labor",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>Our founders Christina Smith and  Clement Savant founded Broadcast to break the norms of the jewelry industry. Cheap, disposable jewelry creates an incentive structure to bid out the work to the cheapest factory available.  We need to vote with our dollars for a more equitable world.</p>",
-            "aspect_ratio": 0.6
-          }
-        },
-        "image-1": {
-          "type": "image",
-          "settings": {
-            "title": "Transparent values",
-            "heading_font_size": "heading-x-small",
-            "text": "<p>We hold true to to who we are.  We believe in equality and justice for all, and those beliefs permeate the work that we do and the jewelry we make.  Everything we do stands for our values and we try to think, speak, and act in a framework of positive change.  Cast out your voice and make a difference. </p>",
-            "aspect_ratio": 0.6
-          }
-        }
-      },
-      "block_order": [
-        "image",
-        "image-0",
-        "image-1"
-      ],
-      "settings": {
-        "default_open": false,
-        "title": "Sourcing & Materials",
-        "heading_font_size": "heading-x-small",
-        "show_icon": false,
-        "icon_name": "icon-award",
-        "icon_size": 20,
-        "width": "wrapper",
-        "color_scheme": "",
-        "icon_color": "",
-        "padding_top": 0,
-        "padding_bottom": 80
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "section-hero": {
@@ -584,10 +506,8 @@
   "order": [
     "section-divider",
     "product",
+    "section_multicolumn_pBYXqU",
     "section_accordion_group_46m4pz",
-    "section-accordion",
-    "section-accordion-0",
-    "section-accordion-1",
     "section-hero",
     "section-custom-content",
     "related"
