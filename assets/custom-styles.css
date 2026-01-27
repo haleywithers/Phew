@@ -303,4 +303,10 @@ p {
         justify-content: center !important;
         padding-bottom: 2rem !important;
     }
+
+    .klaviyo-form {
+        .needsclick {
+            min-height: 0 !important;
+        }
+    }
  }
