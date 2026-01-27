@@ -68,6 +68,7 @@
               {%- assign blocks_counter = blocks_counter | plus: 1 -%}
               
               <div class="static-timeline__row timeline__row{% if blocks_counter == 1 %} is-selected{% endif %}" data-timeline-row>
+                {%- comment -%} Desktop content {%- endcomment -%}
                 <div class="static-timeline__desktop-content">
                   <div class="static-timeline__dot-wrapper">
                     <span class="static-timeline__dot"></span>
@@ -99,7 +100,7 @@
                   </div>
                 </div>
 
-                {%- comment -%} Mobile timeline structure - matches original timeline {%- endcomment -%}
+                {%- comment -%} Mobile content - matches original timeline exactly {%- endcomment -%}
                 <div class="timeline__content">
                   <div class="timeline__content__outer">
                     <div class="timeline__content__inner" data-target-index="{{ blocks_counter }}">
@@ -298,10 +299,9 @@
     }
 
     .static-timeline__content {
-      padding: 0;
+      padding: 4rem 0;
       order: 2;
       display: block;
-      position: relative;
     }
 
     .static-timeline__timeline-wrapper {
@@ -314,27 +314,24 @@
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
       scroll-snap-type: x mandatory;
-      padding-bottom: 80px;
+      padding: 0 32px 0 0;
     }
 
+    /* Much narrower cards to show next card clearly - matches original timeline */
     .static-timeline__row {
       flex: 0 0 auto;
-      width: calc(100vw - 100px);
-      scroll-snap-align: center;
-      position: relative;
+      width: calc(100vw - 67px);
+      scroll-snap-align: start;
+      padding-left: 32px;
     }
 
     .static-timeline__row:first-child {
-      margin-left: 32px;
-    }
-
-    .static-timeline__row:last-child {
-      margin-right: 32px;
+      margin-left: 0;
     }
 
     .static-timeline__row:not(:last-child) {
       margin-bottom: 0;
-      margin-right: 50px;
+      margin-right: 0;
     }
 
     /* Hide desktop content on mobile */
@@ -349,23 +346,24 @@
     }
 
     .timeline__content__outer {
-      padding: 4rem 0 0;
+      padding-top: 50px;
     }
 
     .timeline__content__inner {
       width: 100%;
     }
 
-    /* Timeline indicator (progress line background) */
+    /* Horizontal indicator line - positioned at top */
     .timeline__indicator {
       position: absolute;
-      bottom: -50px;
+      top: 20px;
       left: 0;
       width: 100%;
       height: 2px;
       background: var(--text, currentColor);
       opacity: 0.2;
       pointer-events: none;
+      z-index: 1;
     }
 
     .timeline__indicator__line {
@@ -382,14 +380,15 @@
       width: 100%;
     }
 
-    /* Timeline dots */
+    /* Dot positioned at START of line (left edge) */
     .timeline__dot__wrapper {
       position: absolute;
-      bottom: -60px;
+      top: 10px;
       left: 0;
-      width: 100%;
+      width: 20px;
       height: 20px;
       pointer-events: none;
+      z-index: 2;
     }
 
     .timeline__dot__holder {
@@ -400,14 +399,16 @@
 
     .timeline__dot__button {
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      padding: 10px;
+      left: 0;
+      top: 0;
+      padding: 0;
+      margin: 0;
       background: transparent;
       border: none;
       cursor: pointer;
       pointer-events: auto;
+      width: 20px;
+      height: 20px;
     }
 
     .timeline__dot {
