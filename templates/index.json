@@ -64,7 +64,7 @@
           "type": "text",
           "settings": {
             "text": "<p>no powders, no pills, no pressure</p>",
-            "text_font_size": "body-medium",
+            "text_font_size": "body-large",
             "color": "",
             "target_device_enabled": false,
             "target_device": "mobile"
@@ -94,71 +94,6 @@
         "color_scheme": "",
         "padding_top": 20,
         "padding_bottom": 20
-      }
-    },
-    "section_double_iGTrXA": {
-      "type": "section-double",
-      "blocks": {
-        "image_LMchMi": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/long_box_6c_brighter_1.png",
-            "image_width": 100,
-            "padding_bottom": 16
-          }
-        },
-        "heading_GNYKfV": {
-          "type": "heading",
-          "settings": {
-            "title": "Steady On",
-            "heading_font_size": "heading-small",
-            "padding_bottom": 16,
-            "heading_tag": "automatic"
-          }
-        },
-        "text_JhJc9X": {
-          "type": "text",
-          "settings": {
-            "text": "<p>A calming oral spray with vitamins, botanicals and adaptogens</p>",
-            "text_font_size": "body-medium",
-            "padding_bottom": 16
-          }
-        },
-        "buttons_WHH6mi": {
-          "type": "buttons",
-          "settings": {
-            "button_text": "Get Steady On",
-            "button_url": "shopify://products/release-oral-calming-spray",
-            "button_type": "btn--primary",
-            "button_size": "",
-            "button_style": "btn--solid",
-            "show_arrow": false,
-            "padding_bottom": 16
-          }
-        }
-      },
-      "block_order": [
-        "image_LMchMi",
-        "heading_GNYKfV",
-        "text_JhJc9X",
-        "buttons_WHH6mi"
-      ],
-      "custom_css": [],
-      "name": "Image with text",
-      "settings": {
-        "image_1": "shopify://shop_images/Mask_group.jpg",
-        "image_width": "one-half",
-        "text_alignment": "text-center",
-        "layout": "",
-        "width": "wrapper--full-padded",
-        "height": "screen-height-three-quarters",
-        "mobile_height": "screen-height-one-half--mobile",
-        "reverse_blocks": false,
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "show_placeholder": true,
-        "custom_class": "product-feature__home"
       }
     },
     "section_multicolumn_DMN9Rc": {
@@ -594,7 +529,6 @@
   "order": [
     "section_hero_jxHLCy",
     "section_announcement_9hAXy4",
-    "section_double_iGTrXA",
     "section_multicolumn_DMN9Rc",
     "section_reviews_cY9Cpp",
     "section_accordion_group_Bqxp8q",
