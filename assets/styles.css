@@ -1,0 +1,72 @@
+/*------------------------------------
+ *   CUSTOM FONTS
+ *------------------------------------*/
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Regular.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Regular.woff?v=1769290074') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'American Grotesk';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AmericanGroteskCompressed-Heavy.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AmericanGroteskCompressed-Heavy.woff?v=1769290074') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Medium.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Medium.woff?v=1769290074') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Awesome Serif';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerif-Regular.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerif-Regular.woff?v=1769290074') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Awesome Serif Italic VAR';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalicVAR-Light.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalicVAR-Light.woff?v=1769290074') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+
+:root {
+    --FONT-STACK-HEADING: 'American Grotesk' !important;
+    --FONT-STACK-BODY: 'HK Grotesk' !important;
+}
+
+
+.product-feature__home .brick__section {
+    border-top: 1px solid var(--text) !important;
+}
+
+h2 {
+    font-family: 'American Grotesk' !important;
+}
+
+
+/* DEBUG: temporary test to confirm styles.css is loaded. Remove when verified. */
+body {
+    outline: 4px dashed magenta !important;
+}
+

@@ -1,0 +1,607 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "section_hero_jxHLCy": {
+      "type": "section-hero",
+      "blocks": {
+        "heading_gfnrYy": {
+          "type": "heading",
+          "settings": {
+            "title": "Your emotional support  spray for when days go full spiral.",
+            "heading_font_size": "heading-medium",
+            "heading_tag": "automatic",
+            "padding_bottom": 8
+          }
+        },
+        "button_aJbFrT": {
+          "type": "button",
+          "settings": {
+            "link_text": "I need this",
+            "link": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "full_width": false,
+            "padding_bottom": 8
+          }
+        }
+      },
+      "block_order": [
+        "heading_gfnrYy",
+        "button_aJbFrT"
+      ],
+      "name": "Image banner",
+      "settings": {
+        "image_1": "shopify://shop_images/2ea52648d1644c00071518dae79ccd239d609764.jpg",
+        "link": "",
+        "width": "wrapper--full",
+        "height": "screen-height-two-thirds",
+        "flex_align_desktop": "align--bottom-left-desktop",
+        "content_width": 50,
+        "mobile_height": "screen-height-three-quarters--mobile",
+        "flex_align_mobile": "align--middle-center-mobile",
+        "color_scheme": "scheme-3",
+        "show_text_background": false,
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true
+      }
+    },
+    "section_announcement_9hAXy4": {
+      "type": "section-announcement",
+      "blocks": {
+        "text_RHJW7h": {
+          "type": "text",
+          "settings": {
+            "text": "<p>no powders, no pills, no pressure</p>",
+            "text_font_size": "body-medium",
+            "color": "",
+            "target_device_enabled": false,
+            "target_device": "mobile"
+          }
+        },
+        "image_DTRPPp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Phew_Icon_f71c44b5-cfa0-4cf6-98ca-8763533dd30d.svg",
+            "image_width": 50
+          }
+        }
+      },
+      "block_order": [
+        "text_RHJW7h",
+        "image_DTRPPp"
+      ],
+      "name": "Scrolling text",
+      "settings": {
+        "slider_speed": 7,
+        "text_alignment": "center",
+        "marquee_speed": 100,
+        "direction": "ticker-rtl",
+        "message_spacing": 10,
+        "show_border": false,
+        "layout": "marquee",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "section_double_iGTrXA": {
+      "type": "section-double",
+      "blocks": {
+        "image_LMchMi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/long_box_6c_brighter_1.png",
+            "image_width": 100,
+            "padding_bottom": 16
+          }
+        },
+        "heading_GNYKfV": {
+          "type": "heading",
+          "settings": {
+            "title": "Steady On",
+            "heading_font_size": "heading-small",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_JhJc9X": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A calming oral spray with vitamins, botanicals and adaptogens</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        },
+        "buttons_WHH6mi": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Get Steady On",
+            "button_url": "shopify://products/release-oral-calming-spray",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "image_LMchMi",
+        "heading_GNYKfV",
+        "text_JhJc9X",
+        "buttons_WHH6mi"
+      ],
+      "custom_css": [],
+      "name": "Image with text",
+      "settings": {
+        "image_1": "shopify://shop_images/Mask_group.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-center",
+        "layout": "",
+        "width": "wrapper--full-padded",
+        "height": "screen-height-three-quarters",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true,
+        "custom_class": "product-feature__home"
+      }
+    },
+    "section_multicolumn_DMN9Rc": {
+      "type": "section-multicolumn",
+      "blocks": {
+        "icon_mPGpQk": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Mask_group.png",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "Vitamin B6",
+            "heading_font_size": "heading-small",
+            "text": "<p>Supports energy, psychological function and the regulation of hormonal activity. Keeps things calm, but still you.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_bELbEe": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Mask_group_0a17819f-9da9-4021-bb11-9902387f8404.png",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "Lemon Balm",
+            "heading_font_size": "heading-small",
+            "text": "<p>Helps maintain positive mood and cognitive function. Brings a bit of lightness when the day feels heavy.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_RHLEmi": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Mask_group-2.png",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "KSM-66 \u0003Ashwagandha",
+            "heading_font_size": "heading-small",
+            "text": "<p>Helps manage stress and maintains energy levels. Keeps your cool when everything’s piling up.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
+          }
+        },
+        "icon_UrwA8h": {
+          "type": "icon",
+          "settings": {
+            "column_width": 25,
+            "icon_name": "icon-award",
+            "image": "shopify://shop_images/Mask_group-1.png",
+            "icon_size": 80,
+            "icon_alignment": "icon--top",
+            "icon_color": "",
+            "title": "L-Theanine",
+            "heading_font_size": "heading-small",
+            "text": "<p>An amino acid naturally found in tea leaves. Takes the edge off so your thoughts stop tripping over each other.</p>",
+            "text_font_size": "body-medium",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "icon_mPGpQk",
+        "icon_bELbEe",
+        "icon_RHLEmi",
+        "icon_UrwA8h"
+      ],
+      "name": "Multi column",
+      "settings": {
+        "title": "What's Inside",
+        "heading_font_size": "heading-medium",
+        "description": "",
+        "align_heading": "text-center",
+        "align_text": "text-center",
+        "width": "wrapper--full-padded",
+        "align_columns": "flex-align-top",
+        "layout_mobile": "slider",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
+    "section_reviews_cY9Cpp": {
+      "type": "section-reviews",
+      "blocks": {
+        "review_8iN79r": {
+          "type": "review",
+          "settings": {
+            "title": "Laura S",
+            "subheading": "Customer",
+            "review_content": "<p>“I’ve never been great at taking capsules, so discovering the spray felt like a bit of a revelation. It’s so easy to use, I carry it with me everywhere, and it just fits effortlessly into my day. It really works for me.”</p>",
+            "featured_image": "shopify://shop_images/Mask_group.jpg",
+            "review_url": ""
+          }
+        },
+        "review_Xmf3c8": {
+          "type": "review",
+          "settings": {
+            "title": "Cassie K",
+            "subheading": "Customer",
+            "review_content": "<p>After a few sprays, I felt noticeably calmer and more at ease with myself. I used it before a Zoom meeting I was dreading, and it genuinely helped me feel more settled and focused going into it.</p>",
+            "featured_image": "shopify://shop_images/Phew_Editorial_5.jpg",
+            "review_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_8iN79r",
+        "review_Xmf3c8"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "show_featured_image": true,
+        "image_aspect_ratio": 1.3,
+        "show_quotation_marks": true,
+        "heading_font_size": "heading-small",
+        "text_align": "text-left",
+        "color_scheme": "scheme-2",
+        "card_bg_color": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section_accordion_group_Bqxp8q": {
+      "type": "section-accordion-group",
+      "blocks": {
+        "heading_CCyDpx": {
+          "type": "heading",
+          "settings": {
+            "title": "Good to Know"
+          }
+        },
+        "question_fWhpnD": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Why are sprays awesome?",
+            "content": "<p>Pills need time. Powders need commitment. Sprays work faster, travel better and don’t need a routine.  A small switch that makes support easier to stick with. Give your supplement shelf a quick glance, how much has been spent on aspirational vitamins? Are they even being absorbed into your body?  Sprays are not magic — it’s just a smarter way to take vitamins.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_wgK4mV": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "How do I use the spray?",
+            "content": "<p>We know you're not an idiot but just to make sure you don't spray it on your pillow, Steady On is an oral vitamin spray that goes directly into your mouth. Ideally under your tongue or inside the cheek. Then breathe and think ‘well done me’. </p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_hFrEn7": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "What is in Steady On Oral Spray?",
+            "content": "<p>Steady On is our hero calming oral spray. We spent a long time looking at what ingredients we found actually useful. There’s no room for filler here<strong>.</strong></p><p>Vitamin B6 - Think of this as steady support for busy days. Vitamin B6 helps your nervous system tick along calmly and supports energy when you’re running on fumes.</p><p>Ashwagandha (KSM-66®) - The calm one that knows life’s not getting quieter. Ashwagandha is an adaptogen, which means it helps your body handle stress a little better instead of trying to erase it altogether. KSM-66® is a well-studied form that supports calmer days without making you feel flat or foggy.</p><p>L-Theanine - For when your brain won’t stop chatting. L-Theanine helps take the edge off racing thoughts, supporting a calm, focused feeling without drowsiness. It’s the kind of calm that lets you stay present, not switch off completely.</p><p>Lemon Balm A gentle exhale in plant form. Lemon balm has been used for centuries to support relaxation and ease nervous tension. Soft, soothing and grounding — perfect for those moments when you just need things to feel a bit steadier.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        },
+        "question_NHRCVi": {
+          "type": "question",
+          "settings": {
+            "default_open": false,
+            "title": "Is this for me?",
+            "content": "<p>If you’ve ever thought, “I just need a second”, then this is for you.</p><p>We made Steady On for ourselves because we wanted something simpler — a spray with Vitamin B6 (a real unsung hero) and delicious adaptogens to support full-on days — and we couldn’t find it anywhere.</p><p>It’s not about making stress disappear (we wish), but about feeling calmer, clearer, and more able to deal with what’s in front of you. Big meetings, long to-do lists, or just Tuesday doing its thing.</p>",
+            "show_icon": false,
+            "icon_name": "icon-award",
+            "icon_size": 20,
+            "icon_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_CCyDpx",
+        "question_fWhpnD",
+        "question_wgK4mV",
+        "question_hFrEn7",
+        "question_NHRCVi"
+      ],
+      "name": "Accordion group",
+      "settings": {
+        "heading_font_size": "heading-medium",
+        "question_font_size": "heading-small",
+        "width": "wrapper",
+        "columns": "1",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "section_rich_text_yDyGBA": {
+      "type": "section-rich-text",
+      "blocks": {
+        "buttons_aRJV8B": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Get Steady on",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "buttons_aRJV8B"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "align_text": "text-center",
+        "width": "wrapper",
+        "color_scheme": "",
+        "overlay_type": "disabled",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "section_social_videos_whTHrV": {
+      "type": "section-social-videos",
+      "blocks": {
+        "video_6UHPzQ": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.jpg",
+            "badge_text": "@tiktok"
+          }
+        },
+        "video_9n3cLy": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.jpg",
+            "badge_text": "@tiktok"
+          }
+        },
+        "video_NzRKTQ": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.jpg",
+            "badge_text": "@tiktok"
+          }
+        },
+        "video_77GX38": {
+          "type": "video",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group.jpg",
+            "badge_text": "@tiktok"
+          }
+        }
+      },
+      "block_order": [
+        "video_6UHPzQ",
+        "video_9n3cLy",
+        "video_NzRKTQ",
+        "video_77GX38"
+      ],
+      "name": "Social videos",
+      "settings": {
+        "heading": "Phew Crew Community",
+        "heading_font_size": "heading-medium",
+        "text": "<p><a href=\"https://www.tiktok.com/@phewcrew\" title=\"https://www.tiktok.com/@phewcrew\">Follow us @phewcrew</a></p>",
+        "text_font_size": "body-medium",
+        "align_text": "text-center",
+        "width": "wrapper--full-padded",
+        "aspect_ratio": 1,
+        "layout_desktop": "grid",
+        "blocks_per_row": 4,
+        "layout_mobile": "slider",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "heading_tag": "automatic"
+      }
+    },
+    "section_double_XN3kfn": {
+      "type": "section-double",
+      "blocks": {
+        "heading_dphQPE": {
+          "type": "heading",
+          "settings": {
+            "title": "merch alert",
+            "heading_font_size": "heading-large",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_UTtRMH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wrap your head in the Phew Crew love, get the limited edition first drop beanie. No sea swim needed.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        },
+        "buttons_Xc3b6G": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Go on then",
+            "button_url": "",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading_dphQPE",
+        "text_UTtRMH",
+        "buttons_Xc3b6G"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_1": "shopify://shop_images/e528793f7d44d1e98ca8fde742970f7d8f02b2f2.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-center",
+        "layout": "is-reversed",
+        "width": "wrapper--full",
+        "height": "screen-height-three-quarters",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "show_placeholder": true,
+        "custom_class": ""
+      }
+    },
+    "section_double_8EWVEV": {
+      "type": "section-double",
+      "blocks": {
+        "heading_Y4c6cL": {
+          "type": "heading",
+          "settings": {
+            "title": "Long story short",
+            "heading_font_size": "heading-large",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_rc3aCP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We’re Fiona and Denise. Two sisters who always wanted to build something together. We’ve juggled jobs, families, friendships and all the chaos that comes from trying to keep up.  </p><p>We didn’t set out to start a wellness brand. Phew began in the cupboard graveyard of half-used tubs, forgotten vitamins and the creeping sense that “self-care” was just another thing we were getting wrong.  </p><p>So, we thought what if support was simple? That’s why we started with sprays. Quick enough to use in the thick of it and effective enough to feel straight away. No guilt trips, no miracle claims. Just support that works when you need it, the kind that makes you stop, and breathe - phew, I’ve got this.</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y4c6cL",
+        "text_rc3aCP"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image_1": "shopify://shop_images/c2bb691c7f7a06a10844545334136f332b511ff0.jpg",
+        "image_width": "one-half",
+        "text_alignment": "text-left",
+        "layout": "",
+        "width": "wrapper--full-padded",
+        "height": "screen-height-three-quarters",
+        "mobile_height": "screen-height-one-half--mobile",
+        "reverse_blocks": false,
+        "color_scheme": "scheme-2",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "show_placeholder": true,
+        "custom_class": ""
+      }
+    },
+    "section_newsletter_C36BcR": {
+      "type": "section-newsletter",
+      "blocks": {
+        "newsletter_MbQgY3": {
+          "type": "newsletter",
+          "settings": {
+            "subheading": "",
+            "heading": "join the phew crew",
+            "heading_font_size": "heading-large",
+            "text": "<p>A little calm, a few perks and first dibs on what’s coming next. Nothing overwhelming — just a breather in your inbox.</p>",
+            "text_font_size": "body-medium",
+            "text_columns": 1,
+            "align_text": "text-center",
+            "button_text": "Yes Please",
+            "show_arrow": false,
+            "terms": false,
+            "show_name": true,
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_social_links": false,
+            "bg_color": "",
+            "color": "",
+            "heading_tag": "automatic"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_MbQgY3"
+      ],
+      "name": "Newsletter",
+      "settings": {
+        "width": "wrapper",
+        "height": "three-fifty-height-hero",
+        "mobile_height": "screen-height-one-half--mobile",
+        "color_scheme": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": [
+    "section_hero_jxHLCy",
+    "section_announcement_9hAXy4",
+    "section_double_iGTrXA",
+    "section_multicolumn_DMN9Rc",
+    "section_reviews_cY9Cpp",
+    "section_accordion_group_Bqxp8q",
+    "section_rich_text_yDyGBA",
+    "section_social_videos_whTHrV",
+    "section_double_XN3kfn",
+    "section_double_8EWVEV",
+    "section_newsletter_C36BcR"
+  ]
+}

@@ -1,0 +1,85 @@
+/*------------------------------------
+ *   CUSTOM FONTS (custom-styles.css copy)
+ *------------------------------------*/
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Regular.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Regular.woff?v=1769290074') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'American Grotesk';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AmericanGroteskCompressed-Heavy.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AmericanGroteskCompressed-Heavy.woff?v=1769290074') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HK Grotesk';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Medium.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/HKGrotesk-Medium.woff?v=1769290074') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Awesome Serif';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerif-Regular.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerif-Regular.woff?v=1769290074') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Awesome Serif Italic VAR';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalicVAR-Light.woff2?v=1769290074') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalicVAR-Light.woff?v=1769290074') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+:root {
+    --FONT-STACK-HEADING: 'American Grotesk' !important;
+    --FONT-STACK-BODY: 'HK Grotesk' !important;
+}
+
+
+.product-feature__home .brick__section {
+    border-top: 1px solid var(--text) !important;
+}
+
+h2 {
+    font-family: 'American Grotesk' !important;
+}
+
+/* Layout & Typography overrides (applied after theme.dev.css) */
+html, body {
+    font-family: 'HK Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    color: var(--COLOR-TEXT, #111111) !important;
+    background-color: var(--COLOR-BG, #f7f3ee) !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+    font-family: 'American Grotesk', 'HK Grotesk', system-ui, sans-serif !important;
+}
+
+/* Small visual reset for product bricks */
+.product-feature__home .brick__section {
+    border-top: 1px solid var(--text) !important;
+}
+
+/* Remove this block after verifying */
+/* DEBUG removed */
+
