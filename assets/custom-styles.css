@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5 {
 /*------------------------------------
  *   HERO
  *------------------------------------*/
-.announcement__message p {
+.page-announcement p {
     font-family: 'HK Grotesk' !important;
     text-transform: none !important;
 }
