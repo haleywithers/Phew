@@ -204,3 +204,13 @@ p {
 }
 
 
+@media (max-width:749px) {
+    .section-social-videos {
+        p {
+            margin-bottom: 3rem;
+        }
+
+    }
+}
+
+
