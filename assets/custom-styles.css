@@ -345,4 +345,10 @@ p {
     .static-timeline__image-side {
         min-height:50vh !important;
     }
+
+    .timeline__row {
+        margin-left: var(--gap);
+        margin-right: 0;
+        padding-right: var(--gap);
+    }
  }
