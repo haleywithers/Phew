@@ -35,7 +35,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "footer_vh_desktop": 20,
-        "footer_vh_mobile": 70,
+        "footer_vh_mobile": 20,
         "bg_image": "shopify://shop_images/squiggle_2.png",
         "bg_height_desktop": 800,
         "bg_height_mobile": 260,
