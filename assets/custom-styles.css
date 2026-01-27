@@ -237,7 +237,7 @@ p {
  *------------------------------------*/
 
  .about-hero {
-    .brick__block__text {
+    .brick__block--text .brick__block__text {
         padding: 0 !important;
     }
  }
