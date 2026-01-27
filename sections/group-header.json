@@ -88,6 +88,17 @@
     "mobile-menu": {
       "type": "mobile-menu",
       "blocks": {
+        "image_FdGTJn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Phew_Icon_f71c44b5-cfa0-4cf6-98ca-8763533dd30d.svg",
+            "image_url": "",
+            "image_alignment": "left",
+            "image_width": 20,
+            "pin_to_bottom": false,
+            "padding_bottom": 14
+          }
+        },
         "menu": {
           "type": "menu",
           "settings": {
@@ -118,7 +129,7 @@
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "steady-on",
             "image_width": 15,
             "text_font_size": "body-small",
             "bg_color": "",
@@ -130,7 +141,7 @@
         "product-0": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "beanie",
             "image_width": 15,
             "text_font_size": "body-small",
             "bg_color": "",
@@ -177,6 +188,7 @@
         }
       },
       "block_order": [
+        "image_FdGTJn",
         "menu",
         "divider",
         "text-1",
