@@ -677,6 +677,7 @@
             "show_arrow": false,
             "terms": false,
             "show_name": true,
+            "klaviyo_embed": "<div class=\"klaviyo-form-WG3gvD\"></div>",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--solid",
