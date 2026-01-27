@@ -96,6 +96,70 @@
         "padding_bottom": 20
       }
     },
+    "product_hero_home_CdDEa9": {
+      "type": "product-hero-home",
+      "blocks": {
+        "image_wYC6yf": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/long_box_6c_brighter_1.png",
+            "image_width": 80,
+            "padding_bottom": 16
+          }
+        },
+        "heading_tRBXrt": {
+          "type": "heading",
+          "settings": {
+            "title": "Steady On",
+            "heading_font_size": "heading-medium",
+            "padding_bottom": 16,
+            "heading_tag": "automatic"
+          }
+        },
+        "text_VrPHzY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A calming oral spray with vitamins, botanicals and adaptogens</p>",
+            "text_font_size": "body-medium",
+            "padding_bottom": 16
+          }
+        },
+        "buttons_LeGLmK": {
+          "type": "buttons",
+          "settings": {
+            "button_text": "Get Steady On",
+            "button_url": "shopify://products/steady-on",
+            "button_type": "btn--primary",
+            "button_size": "",
+            "button_style": "btn--solid",
+            "show_arrow": false,
+            "padding_bottom": 16
+          }
+        }
+      },
+      "block_order": [
+        "image_wYC6yf",
+        "heading_tRBXrt",
+        "text_VrPHzY",
+        "buttons_LeGLmK"
+      ],
+      "name": "Product Hero",
+      "settings": {
+        "layout": "",
+        "height": "screen-height-full",
+        "border_top": true,
+        "border_bottom": true,
+        "image": "shopify://shop_images/Mask_group.jpg",
+        "image_bg_color": "#cfc6e3",
+        "image_width_desktop": 80,
+        "image_width_mobile": 90,
+        "content_bg_color": "#F5F1E8",
+        "content_alignment": "text-center",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "section_multicolumn_DMN9Rc": {
       "type": "section-multicolumn",
       "blocks": {
@@ -529,6 +593,7 @@
   "order": [
     "section_hero_jxHLCy",
     "section_announcement_9hAXy4",
+    "product_hero_home_CdDEa9",
     "section_multicolumn_DMN9Rc",
     "section_reviews_cY9Cpp",
     "section_accordion_group_Bqxp8q",
