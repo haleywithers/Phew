@@ -270,5 +270,9 @@ p {
     .tab-link {
         font-family: 'HK Grotesk' !important;
     }
+
+    .grid-item {
+        border: 1px solid #221F1F;
+    }
  }
 
