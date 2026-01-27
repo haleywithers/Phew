@@ -367,10 +367,10 @@ p {
 
 
 
-
- .newsletter__embed.newsletter__embed--klaviyo {
-    .form {
+ .index-newsletter {
+    .newsletter__wrapper {
         width: 50% !important;
         margin: auto !important;
     }
  }
+
