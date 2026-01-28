@@ -523,5 +523,9 @@ p {
             margin-top: 2rem !important;
         }
     }
+
+    .footer-custom__bg {
+        height: 600px !important;
+    }
  }
 
