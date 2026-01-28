@@ -115,10 +115,8 @@ p {
 }
 
 .image-overlay {
-.opacity: 50% !important;
-
+    opacity: 50% !important;
 }
-
 }
 
 @media (max-width: 749px) {
