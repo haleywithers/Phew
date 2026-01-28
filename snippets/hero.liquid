@@ -203,8 +203,8 @@
                       {{ block.shopify_attributes }}
                       style="--block-padding-bottom: {{ block.settings.padding_bottom }}px;"
                     >
-                      {{ block.settings.title | escape -}}
-                    </{{ heading_tag }}>
+                      {{ block.settings.title -}}
+                    </{{ heading_tag  }}>
                   {%- endif -%}
 
                 {%- when 'text' -%}
