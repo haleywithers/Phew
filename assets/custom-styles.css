@@ -178,11 +178,12 @@ p {
 
  .reviews__grid .review__quote-inner{
     font-family: 'HK Grotesk' !important;
+    font-weight: bold !important;
+    font-size: 2.125rem !important;
  }
 
  .reviews__grid p {
     font-family: 'HK Grotesk' !important;
-    font-weight: bold !important;
  }
 
  .reviews__grid .review__author__subheading {
