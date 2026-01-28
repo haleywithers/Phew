@@ -429,7 +429,7 @@ p {
 
  @media (max-width:749px) {
     .timeline__inner {
-        padding-top: 7rem;
+        padding-top: 4rem;
         padding-bottom: 3rem;
     }
 
