@@ -143,14 +143,31 @@
   }
 
   #FooterCustom-{{ section.id }} .footer-custom__accordion__summary::after {
-    content: "+";
     display: inline-block;
     margin-left: 12px;
     line-height: 1;
   }
-  #FooterCustom-{{ section.id }} details[open] > .footer-custom__accordion__summary::after {
-    content: "–";
-  }
+
+  /* Accordion icon (Broadcast-style arrow) */
+#FooterCustom-{{ section.id }} .footer-custom__accordion__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  transition: transform 220ms ease;
+}
+
+#FooterCustom-{{ section.id }} details[open] .footer-custom__accordion__icon {
+  transform: rotate(180deg);
+}
+
+/* Match Broadcast sizing */
+#FooterCustom-{{ section.id }} .footer-custom__accordion__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+ 
 
   #FooterCustom-{{ section.id }} .footer-custom__accordion__content {
     padding: 6px 0 0 0;
