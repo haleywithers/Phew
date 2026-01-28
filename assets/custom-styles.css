@@ -329,6 +329,12 @@ p {
     border-bottom: 1px solid #221F1F;
  }
 
+ .product__submit__buttons {
+    .btn__text, .btn__price {
+        font-size: 1.1rem !important;
+    }
+ }
+
  /*------------------------------------
  *  KLAYVIO
  *------------------------------------*/
