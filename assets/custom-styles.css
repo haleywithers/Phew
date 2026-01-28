@@ -186,11 +186,11 @@ p {
     font-family: 'HK Grotesk' !important;
  }
 
- @media (min-width: 750px) {
+
      .reviews__grid .heading-small {
     font-size: var(--font-heading-x-small);
 }
- }
+ 
 
  .reviews__grid .review__author__subheading {
     letter-spacing: 0 !important;
