@@ -417,8 +417,8 @@
         "sticker_width_desktop": 150,
         "mobile_hide": false,
         "sticker_align_mobile": "left",
-        "sticker_top_mobile": -20,
-        "sticker_width_mobile": 120,
+        "sticker_top_mobile": 10,
+        "sticker_width_mobile": 135,
         "css_class": "",
         "custom_css": ""
       }
