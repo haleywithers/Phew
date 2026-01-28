@@ -589,7 +589,7 @@
         "padding_top": 0,
         "padding_bottom": 0,
         "show_placeholder": true,
-        "custom_class": ""
+        "custom_class": "merch-alert"
       }
     },
     "anchor_link_XmFnqn": {
@@ -709,7 +709,7 @@
         "animation": "pulse",
         "animationSpeed": 20,
         "sticker_align_desktop": "left",
-        "sticker_top_desktop": -165,
+        "sticker_top_desktop": -130,
         "sticker_side_desktop": 5,
         "sticker_width_desktop": 105,
         "mobile_hide": false,
