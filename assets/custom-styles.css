@@ -187,9 +187,9 @@ p {
  }
 
  @media (min-width: 750px) {
-     .reviews__grid p {
-    font-size: 1.1rem;
- }
+     .reviews__grid .heading-small {
+    font-size: var(--font-heading-x-small);
+}
  }
 
  .reviews__grid .review__author__subheading {
