@@ -110,6 +110,7 @@ p {
     .hero__title {
     font-family: 'Awesome Serif' !important;
     text-transform: none;
+    max-width: 400px;
 }
 }
 
@@ -365,6 +366,9 @@ p {
     }
  }
 
+   /*------------------------------------
+ *   NEWSLETTER
+ *------------------------------------*/
 
 
  .index-newsletter {
