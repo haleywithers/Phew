@@ -117,7 +117,7 @@ p {
 
 @media (max-width: 749px) {
     .index-hero {
-        .hero-title {
+        .hero__content {
             max-width: 75%;
         }
     }
