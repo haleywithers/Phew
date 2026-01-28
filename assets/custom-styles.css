@@ -361,7 +361,7 @@ p {
     }
 
     luna-templates-animated-sticker .stckrimg img {
-        transform: rotate(-5deg) !important;
+        transform: rotate(-25deg) !important;
     }
  }
 
