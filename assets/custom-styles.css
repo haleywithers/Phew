@@ -500,3 +500,13 @@ p {
     text-transform: uppercase;
  }
 
+
+
+
+ .footer-custom__accordion__summary {
+    .footer-custom__heading {
+        font-family: 'American Grotesk' !important; 
+    text-transform: uppercase;
+    }
+ }
+
