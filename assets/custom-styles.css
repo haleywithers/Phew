@@ -507,6 +507,7 @@ p {
     .footer-custom__heading {
         font-family: 'American Grotesk' !important; 
     text-transform: uppercase;
+    font-size: var(--font-heading-small);
     }
  }
 
