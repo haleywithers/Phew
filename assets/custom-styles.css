@@ -353,6 +353,13 @@ p {
     font-size: var(--font-body-medium) !important;
  }
 
+ .product-accordion {
+    .accordion__title {
+        font-weight: 400 !important;
+        font-size: var(--font-body-medium) !important;
+    }
+ }
+
  /*------------------------------------
  *  KLAYVIO
  *------------------------------------*/
