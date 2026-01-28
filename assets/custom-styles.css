@@ -399,6 +399,7 @@ p {
     .hero__rte {
         width: 60%;
         margin: auto;
+        margin-bottom:3rem;
     }
 }
 }
