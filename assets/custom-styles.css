@@ -331,7 +331,7 @@ p {
 
  .product__submit__buttons {
     .btn__text, .btn__price {
-        font-size: .75rem !important;
+        font-size: .85rem !important;
         letter-spacing: 0 !important;
     }
 
