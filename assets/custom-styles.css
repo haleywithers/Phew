@@ -39,9 +39,9 @@
 }
 
 @font-face {
-    font-family: 'Awesome Serif Italic VAR';
-    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalicVAR-Light.woff2?v=1769290074') format('woff2'),
-        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalicVAR-Light.woff?v=1769290074') format('woff');
+    font-family: 'Awesome Serif';
+    src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalic-Regular.woff2?v=1769617250') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalic-Regular.woff?v=1769617250') format('woff');
     font-weight: 300;
     font-style: italic;
     font-display: swap;
