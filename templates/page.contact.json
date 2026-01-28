@@ -19,6 +19,25 @@
         "padding_bottom": 0
       }
     },
+    "animated_stickers_Ff7wwC": {
+      "type": "animated-stickers",
+      "name": "💫 Animated Sticker",
+      "settings": {
+        "image": "shopify://shop_images/Small_Wins.svg",
+        "animation": "pulse",
+        "animationSpeed": 20,
+        "sticker_align_desktop": "right",
+        "sticker_top_desktop": 40,
+        "sticker_side_desktop": 5,
+        "sticker_width_desktop": 150,
+        "mobile_hide": false,
+        "sticker_align_mobile": "right",
+        "sticker_top_mobile": 0,
+        "sticker_width_mobile": 100,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "main-page": {
       "type": "main-page",
       "settings": {
@@ -75,11 +94,32 @@
         "padding_bottom": 50,
         "heading_tag": "automatic"
       }
+    },
+    "animated_stickers_TQzHdB": {
+      "type": "animated-stickers",
+      "name": "💫 Animated Sticker",
+      "settings": {
+        "image": "shopify://shop_images/Smile_Sticker.svg",
+        "animation": "pulse",
+        "animationSpeed": 20,
+        "sticker_align_desktop": "left",
+        "sticker_top_desktop": -5,
+        "sticker_side_desktop": 5,
+        "sticker_width_desktop": 95,
+        "mobile_hide": false,
+        "sticker_align_mobile": "left",
+        "sticker_top_mobile": 40,
+        "sticker_width_mobile": 100,
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
     "section-divider",
+    "animated_stickers_Ff7wwC",
     "main-page",
-    "contact-form"
+    "contact-form",
+    "animated_stickers_TQzHdB"
   ]
 }
