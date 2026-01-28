@@ -47,6 +47,7 @@
         "height": "screen-height-one-half",
         "flex_align_desktop": "align--bottom-left-desktop",
         "content_width": 50,
+        "mobile_image": "shopify://shop_images/Rectangle_340_9aa63bca-4eae-4387-9b62-471c6fbaaf55.png",
         "mobile_height": "screen-height-three-quarters--mobile",
         "flex_align_mobile": "align--bottom-left-mobile",
         "color_scheme": "scheme-3",
