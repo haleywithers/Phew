@@ -485,6 +485,9 @@ p {
     }
  }
 
+    /*------------------------------------
+ *   COOKIE BANNER
+ *------------------------------------*/
 
 
  .shopify-pc__banner__dialog {
@@ -500,6 +503,9 @@ p {
     text-transform: uppercase;
  }
 
+    /*------------------------------------
+ *   FOOTER
+ *------------------------------------*/
 
 
 
@@ -508,6 +514,14 @@ p {
         font-family: 'American Grotesk' !important; 
     text-transform: uppercase;
     font-size: var(--font-heading-small);
+    }
+ }
+
+ @media (max-width: 749px) {
+    .footer-custom__bottom{
+        .footer-custom__logo-full {
+            margin-top: 5rem !important;
+        }
     }
  }
 
