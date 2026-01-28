@@ -395,6 +395,11 @@ p {
         width: 50% !important;
         margin: auto !important;
     }
+
+    .hero__rte {
+        width: 60%;
+        margin: auto;
+    }
 }
 }
 
