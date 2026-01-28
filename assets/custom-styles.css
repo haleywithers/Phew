@@ -339,7 +339,13 @@ p {
     .product-item__info {
         border-top: 1px solid #221F1F;
     }
+
+    .supports-touch.hover-images::after {
+        display: none !important;
+    }
  }
+
+ 
 
  .collection__products {
     border-bottom: 1px solid #221F1F;
