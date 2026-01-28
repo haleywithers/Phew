@@ -103,6 +103,17 @@ p {
     text-transform: uppercase;
 }
 
+
+.mobile-menu__block-inner {
+    .sliderow__title span {
+        font-family: 'American Grotesk';
+        text-transform: uppercase;
+}
+}
+
+
+
+
 /*------------------------------------
  *   HERO
  *------------------------------------*/
