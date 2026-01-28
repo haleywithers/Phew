@@ -335,6 +335,10 @@ p {
     .grid-item {
         border: 1px solid #221F1F;
     }
+
+    .product-item__info {
+        border-top: 1px solid #221F1F;
+    }
  }
 
  .collection__products {
