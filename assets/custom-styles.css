@@ -395,8 +395,8 @@ p {
 
 
  .shopify-pc__banner__dialog {
-    box-shadow: 0;
-    border: 1px solid #221F1F;
+    box-shadow: 0 !important;
+    border: 1px solid #221F1F !important;
  }
 
  .shopify-pc__banner__btn-accept, .shopify-pc__banner__btn-decline {
