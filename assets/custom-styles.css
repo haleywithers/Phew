@@ -561,3 +561,7 @@ p {
     }
  }
 
+ .footer-custom__bottom-inner {
+    justify-content: center;
+ }
+
