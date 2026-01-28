@@ -562,6 +562,6 @@ p {
  }
 
  .footer-custom__bottom-inner {
-    justify-content: center;
+    justify-content: center !important;
  }
 
