@@ -344,13 +344,13 @@ p {
 
  .product__block.product__description {
     p {
-        font-size: var(--font-body-small) !important;
+        font-size: var(--font-body-medium) !important;
         padding-bottom: 1.5rem;
     }
  }
 
  .product__tax {
-    font-size: var(--font-body-small) !important;
+    font-size: var(--font-body-medium) !important;
  }
 
  /*------------------------------------
