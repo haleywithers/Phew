@@ -527,5 +527,9 @@ p {
     .footer-custom__bg {
         height: 600px !important;
     }
+
+    .footer-custom__bottom {
+        padding: .5rem;
+    }
  }
 
