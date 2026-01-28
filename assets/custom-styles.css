@@ -127,6 +127,7 @@ p {
     .index-hero {
         .hero__content {
             max-width: 75%;
+            padding: 0 0 1.5rem 1.5rem;
 
             h2 {
                     font-size: 1.7rem !important;
