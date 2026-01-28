@@ -103,7 +103,7 @@
         "animation": "pulse",
         "animationSpeed": 20,
         "sticker_align_desktop": "left",
-        "sticker_top_desktop": -5,
+        "sticker_top_desktop": -55,
         "sticker_side_desktop": 5,
         "sticker_width_desktop": 95,
         "mobile_hide": false,
