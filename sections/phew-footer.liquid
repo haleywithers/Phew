@@ -299,8 +299,19 @@
             {%- if menu_1 != blank and linklists[menu_1].links.size > 0 -%}
               <details class="footer-custom__accordion">
                 <summary class="footer-custom__accordion__summary">
-                  <span class="footer-custom__heading">{{ menu_1_title | escape }}</span>
-                </summary>
+                    <span class="footer-custom__heading">{{ menu_1_title | escape }}</span>
+
+                    <span class="footer-custom__accordion__icon" aria-hidden="true">
+                      <svg aria-hidden="true" focusable="false" role="presentation"
+                        class="icon icon-nav-arrow-down"
+                        viewBox="0 0 24 24">
+                        <path d="m6 9 6 6 6-6"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"></path>
+                      </svg>
+                    </span>
+                  </summary>
                 <div class="footer-custom__accordion__content">
                   <ul class="footer-custom__menu list-unstyled">
                     {%- for link in linklists[menu_1].links -%}
@@ -336,7 +347,18 @@
             {%- if menu_2 != blank and linklists[menu_2].links.size > 0 -%}
               <details class="footer-custom__accordion">
                 <summary class="footer-custom__accordion__summary">
-                  <span class="footer-custom__heading">{{ menu_2_title | escape }}</span>
+                  <span class="footer-custom__heading">{{ menu_1_title | escape }}</span>
+
+                  <span class="footer-custom__accordion__icon" aria-hidden="true">
+                    <svg aria-hidden="true" focusable="false" role="presentation"
+                      class="icon icon-nav-arrow-down"
+                      viewBox="0 0 24 24">
+                      <path d="m6 9 6 6 6-6"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
                 </summary>
                 <div class="footer-custom__accordion__content">
                   <ul class="footer-custom__menu list-unstyled">
