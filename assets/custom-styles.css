@@ -520,7 +520,7 @@ p {
  @media (max-width: 749px) {
     .footer-custom__bottom{
         .footer-custom__logo-full {
-            margin-top: 5rem !important;
+            margin-top: 2rem !important;
         }
     }
  }
