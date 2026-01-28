@@ -25,7 +25,7 @@
           "type": "button",
           "settings": {
             "link_text": "I need this",
-            "link": "",
+            "link": "shopify://products/steady-on",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--solid",
@@ -381,7 +381,7 @@
           "type": "buttons",
           "settings": {
             "button_text": "Get Steady on",
-            "button_url": "",
+            "button_url": "shopify://products/steady-on",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--solid",
@@ -561,7 +561,7 @@
           "type": "buttons",
           "settings": {
             "button_text": "Go on then",
-            "button_url": "",
+            "button_url": "shopify://products/beanie",
             "button_type": "btn--primary",
             "button_size": "",
             "button_style": "btn--solid",
