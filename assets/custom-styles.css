@@ -331,7 +331,7 @@ p {
 
  .product__submit__buttons {
     .btn__text, .btn__price {
-        font-size: .85rem !important;
+        font-size: .95rem !important;
         letter-spacing: 0 !important;
     }
 
@@ -339,6 +339,12 @@ p {
         .btn__price {
             display: none !important;
         }
+    }
+ }
+
+ .product__block.product__description {
+    p {
+        font-size: var(--font-body-medium);
     }
  }
 
