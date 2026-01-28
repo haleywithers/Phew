@@ -344,7 +344,7 @@ p {
 
  .product__block.product__description {
     p {
-        font-size: var(--font-body-medium);
+        font-size: var(--font-body-medium) !important;
     }
  }
 
