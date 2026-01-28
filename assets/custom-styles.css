@@ -115,6 +115,14 @@ p {
 }
 }
 
+@media (max-width: 749px) {
+    .index-hero {
+        .hero-title {
+            max-width: 85%;
+        }
+    }
+}
+
 
 
 
