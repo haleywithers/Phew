@@ -29,8 +29,6 @@
   #FooterCustom-{{ section.id }} {
     position: relative;
     overflow: hidden;
-
-    /* Client-controlled height */
     min-height: {{ footer_vh_desktop }}vh;
   }
 
@@ -42,12 +40,15 @@
     z-index: 0;
     pointer-events: none;
   }
+
   #FooterCustom-{{ section.id }} .footer-custom__bg img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: bottom center;
     display: block;
+
+    /* Desktop: prevent awkward crop by allowing contain */
+    object-fit: {{ section.settings.bg_fit_desktop }};
+    object-position: {{ section.settings.bg_position_desktop }};
   }
 
   #FooterCustom-{{ section.id }} .footer-custom__inner {
@@ -56,33 +57,24 @@
     height: 100%;
   }
 
- 
-
   /* Row 1 layout */
   #FooterCustom-{{ section.id }} .footer-custom__top {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(3, 1fr);
   }
-  #FooterCustom-{{ section.id }} .footer-custom__left {
-    flex: 1 1 320px;
-    min-width: 280px;
-  }
+
   #FooterCustom-{{ section.id }} .footer-custom__right {
-    flex: 1 1 420px;
-    min-width: 280px;
     display: flex;
     justify-content: space-between;
     gap: 32px;
-    
   }
 
   @media (min-width: 750px) {
-     #FooterCustom-{{ section.id }} .footer-custom__right {
-    grid-column-start: 3;
+    #FooterCustom-{{ section.id }} .footer-custom__right {
+      grid-column-start: 3;
+    }
   }
-  }
-
 
   #FooterCustom-{{ section.id }} .footer-custom__menu-col {
     flex: 1 1 160px;
@@ -109,6 +101,61 @@
     margin-top: 16px;
   }
 
+  /* Menus: remove markers */
+  #FooterCustom-{{ section.id }} .footer-custom__menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #FooterCustom-{{ section.id }} .footer-custom__menu li::marker {
+    content: none;
+  }
+
+  /* Desktop hover underline (Broadcast-like) */
+  @media (hover: hover) and (min-width: 750px) {
+    #FooterCustom-{{ section.id }} .footer-custom__link .navtext {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.2em;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 180ms ease;
+    }
+    #FooterCustom-{{ section.id }} .footer-custom__link:hover .navtext {
+      text-decoration-color: currentColor;
+    }
+  }
+
+  /* Accordion styles (mobile) */
+  #FooterCustom-{{ section.id }} .footer-custom__accordion {
+    border: 0;
+  }
+
+  #FooterCustom-{{ section.id }} .footer-custom__accordion__summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #FooterCustom-{{ section.id }} .footer-custom__accordion__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #FooterCustom-{{ section.id }} .footer-custom__accordion__summary::after {
+    content: "+";
+    display: inline-block;
+    margin-left: 12px;
+    line-height: 1;
+  }
+  #FooterCustom-{{ section.id }} details[open] > .footer-custom__accordion__summary::after {
+    content: "–";
+  }
+
+  #FooterCustom-{{ section.id }} .footer-custom__accordion__content {
+    padding: 6px 0 0 0;
+  }
+
   /* Row 2 logo inside container (respects margins) */
   #FooterCustom-{{ section.id }} .footer-custom__logo-full {
     margin-top: 10rem;
@@ -117,17 +164,6 @@
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  /* Row 3 bottom bar */
-  #FooterCustom-{{ section.id }} .footer-custom__bottom {
-    padding-top: 2rem;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-    align-items: center;
   }
 
   /* Full-width border-top above credits row */
@@ -141,14 +177,35 @@
     margin-top: 24px;
   }
 
-  /* Klaviyo embed should not overflow */
-  #FooterCustom-{{ section.id }} .footer-custom__embed {
-    max-width: 100%;
+  /* Row 3 bottom bar (full width), but text aligned to site grid */
+  #FooterCustom-{{ section.id }} .footer-custom__bottom {
+    padding-top: 2rem;
   }
+  #FooterCustom-{{ section.id }} .footer-custom__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Klaviyo embed should not overflow */
+  #FooterCustom-{{ section.id }} .footer-custom__embed,
   #FooterCustom-{{ section.id }} .footer-custom__embed * {
     max-width: 100%;
   }
 
+  /* Show desktop menu layout, hide accordion */
+  @media (min-width: 750px) {
+    #FooterCustom-{{ section.id }} .footer-custom__accordion {
+      display: none;
+    }
+    #FooterCustom-{{ section.id }} .footer-custom__menu-desktop {
+      display: block;
+    }
+  }
+
+  /* Mobile: show accordions, hide desktop menu layout */
   @media (max-width: 749px) {
     #FooterCustom-{{ section.id }} {
       min-height: {{ footer_vh_mobile }}vh;
@@ -157,24 +214,31 @@
     #FooterCustom-{{ section.id }} .footer-custom__bg {
       height: {{ bg_height_mobile }}px;
     }
- 
+
+    /* Mobile should be cover (so it isn't too small) */
+    #FooterCustom-{{ section.id }} .footer-custom__bg img {
+      object-fit: cover;
+      object-position: bottom center;
+    }
+
     #FooterCustom-{{ section.id }} .footer-custom__top {
+      grid-template-columns: 1fr !important;
       gap: 24px;
     }
+
     #FooterCustom-{{ section.id }} .footer-custom__right {
-      gap: 24px;
+      display: block;
+      gap: 0;
+    }
+
+    #FooterCustom-{{ section.id }} .footer-custom__menu-desktop {
+      display: none;
+    }
+
+    #FooterCustom-{{ section.id }} .footer-custom__accordion {
+      display: block;
     }
   }
-
-      @media (max-width: 749px) {
-        .footer-custom__top {
-            grid-template-columns: 1fr !important;
-        }
-
-        #FooterCustom-{{ section.id }} .footer-custom__right {
-                grid-template-start: 1 !important;
-            }
-    }
 {%- endstyle -%}
 
 <footer
@@ -199,117 +263,156 @@
     </div>
   {%- endif -%}
 
-  <div class="footer-custom__inner footer-custom__pad section-padding">
+  <div class="footer-custom__inner section-padding">
     <div class="container">
+      <!-- ROW 1 -->
+      <div class="footer-custom__top">
+        <div class="footer-custom__left">
+          {%- if intro_heading != blank or intro_body != blank -%}
+            <div class="footer-custom__intro">
+              {%- if intro_heading != blank -%}
+                <h3 class="footer-custom__heading">{{ intro_heading | escape }}</h3>
+              {%- endif -%}
+              {%- if intro_body != blank -%}
+                <div class="rte">{{ intro_body }}</div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
 
-    <!-- ROW 1 -->
-    <div class="footer-custom__top">
-      <div class="footer-custom__left">
-        {%- if intro_heading != blank or intro_body != blank -%}
-          <div class="footer-custom__intro">
-            {%- if intro_heading != blank -%}
-              <h3 class="footer-custom__heading">{{ intro_heading | escape }}</h3>
-            {%- endif -%}
-            {%- if intro_body != blank -%}
-              <div class="rte">{{ intro_body }}</div>
-            {%- endif -%}
-          </div>
-        {%- endif -%}
-
-        {%- if klaviyo_embed != blank -%}
-          <div class="footer-custom__embed">
-            {{ klaviyo_embed }}
-          </div>
-        {%- else -%}
-          {%- if newsletter_block != blank -%}
-            {%- render 'newsletter-form', block: newsletter_block, show_discount_message: false, success_text: '', small_newsletter: false -%}
+          {%- if klaviyo_embed != blank -%}
+            <div class="footer-custom__embed">
+              {{ klaviyo_embed }}
+            </div>
           {%- else -%}
-            <p>{{ 'general.newsletter_form.newsletter_email' | t }}</p>
+            {%- if newsletter_block != blank -%}
+              {%- render 'newsletter-form', block: newsletter_block, show_discount_message: false, success_text: '', small_newsletter: false -%}
+            {%- else -%}
+              <p>{{ 'general.newsletter_form.newsletter_email' | t }}</p>
+            {%- endif -%}
           {%- endif -%}
-        {%- endif -%}
 
-        <div class="footer-custom__socials">
-          {%- render 'social-icons' -%}
+          <div class="footer-custom__socials">
+            {%- render 'social-icons' -%}
+          </div>
+        </div>
+
+        <div class="footer-custom__right">
+          <!-- MENU 1 -->
+          <div class="footer-custom__menu-col">
+            {%- if menu_1 != blank and linklists[menu_1].links.size > 0 -%}
+              <details class="footer-custom__accordion">
+                <summary class="footer-custom__accordion__summary">
+                  <span class="footer-custom__heading">{{ menu_1_title | escape }}</span>
+                </summary>
+                <div class="footer-custom__accordion__content">
+                  <ul class="footer-custom__menu list-unstyled">
+                    {%- for link in linklists[menu_1].links -%}
+                      <li>
+                        <a class="footer-custom__link navlink" href="{{ link.url }}">
+                          <span class="navtext">{{ link.title }}</span>
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </details>
+
+              <div class="footer-custom__menu-desktop">
+                {%- if menu_1_title != blank -%}
+                  <h3 class="footer-custom__heading">{{ menu_1_title | escape }}</h3>
+                {%- endif -%}
+                <ul class="footer-custom__menu list-unstyled">
+                  {%- for link in linklists[menu_1].links -%}
+                    <li>
+                      <a class="footer-custom__link navlink" href="{{ link.url }}">
+                        <span class="navtext">{{ link.title }}</span>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+          </div>
+
+          <!-- MENU 2 -->
+          <div class="footer-custom__menu-col">
+            {%- if menu_2 != blank and linklists[menu_2].links.size > 0 -%}
+              <details class="footer-custom__accordion">
+                <summary class="footer-custom__accordion__summary">
+                  <span class="footer-custom__heading">{{ menu_2_title | escape }}</span>
+                </summary>
+                <div class="footer-custom__accordion__content">
+                  <ul class="footer-custom__menu list-unstyled">
+                    {%- for link in linklists[menu_2].links -%}
+                      <li>
+                        <a class="footer-custom__link navlink" href="{{ link.url }}">
+                          <span class="navtext">{{ link.title }}</span>
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              </details>
+
+              <div class="footer-custom__menu-desktop">
+                {%- if menu_2_title != blank -%}
+                  <h3 class="footer-custom__heading">{{ menu_2_title | escape }}</h3>
+                {%- endif -%}
+                <ul class="footer-custom__menu list-unstyled">
+                  {%- for link in linklists[menu_2].links -%}
+                    <li>
+                      <a class="footer-custom__link navlink" href="{{ link.url }}">
+                        <span class="navtext">{{ link.title }}</span>
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+          </div>
         </div>
       </div>
 
-      <div class="footer-custom__right">
-        <div class="footer-custom__menu-col">
-          {%- if menu_1_title != blank -%}
-            <h3 class="footer-custom__heading">{{ menu_1_title | escape }}</h3>
-          {%- endif -%}
-
-          {%- if menu_1 != blank and linklists[menu_1].links.size > 0 -%}
-            <ul class="footer-custom__menu list-unstyled">
-              {%- for link in linklists[menu_1].links -%}
-                <li>
-                  <a class="navlink" href="{{ link.url }}">
-                    <span class="navtext">{{ link.title }}</span>
-                  </a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
+      <!-- ROW 2 -->
+      {%- if logo_full != blank -%}
+        <div class="footer-custom__logo-full">
+          <img
+            src="{{ logo_full | image_url: width: 2400 }}"
+            srcset="
+              {{ logo_full | image_url: width: 750 }} 750w,
+              {{ logo_full | image_url: width: 1100 }} 1100w,
+              {{ logo_full | image_url: width: 1600 }} 1600w,
+              {{ logo_full | image_url: width: 2400 }} 2400w
+            "
+            sizes="100vw"
+            alt="{{ logo_full.alt | default: shop.name | strip_html | escape }}"
+            loading="lazy"
+          >
         </div>
+      {%- endif -%}
+    </div><!-- /.container -->
 
-        <div class="footer-custom__menu-col">
-          {%- if menu_2_title != blank -%}
-            <h3 class="footer-custom__heading">{{ menu_2_title | escape }}</h3>
-          {%- endif -%}
-
-          {%- if menu_2 != blank and linklists[menu_2].links.size > 0 -%}
-            <ul class="footer-custom__menu list-unstyled">
-              {%- for link in linklists[menu_2].links -%}
-                <li>
-                  <a class="navlink" href="{{ link.url }}">
-                    <span class="navtext">{{ link.title }}</span>
-                  </a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-        </div>
-      </div>
-    </div>
-
-    <!-- ROW 2 (inside container) -->
-    {%- if logo_full != blank -%}
-      <div class="footer-custom__logo-full">
-        <img
-          src="{{ logo_full | image_url: width: 2400 }}"
-          srcset="
-            {{ logo_full | image_url: width: 750 }} 750w,
-            {{ logo_full | image_url: width: 1100 }} 1100w,
-            {{ logo_full | image_url: width: 1600 }} 1600w,
-            {{ logo_full | image_url: width: 2400 }} 2400w
-          "
-          sizes="100vw"
-          alt="{{ logo_full.alt | default: shop.name | strip_html | escape }}"
-          loading="lazy"
-        >
-      </div>
-    {%- endif -%}
-
-    </div> <!-- /.container -->
-
-
-    <!-- Full-width border above credits row -->
+    <!-- Full-width divider -->
     <div class="footer-custom__divider" aria-hidden="true"></div>
 
-    <!-- ROW 3 -->
+    <!-- ROW 3 (full width divider, but text aligned) -->
     <div class="footer-custom__bottom">
-      <div class="footer-custom__copyright">
-        Copyright &copy; {{ shop.name }} {{ 'now' | date: '%Y' }}
-      </div>
+      <div class="container">
+        <div class="footer-custom__bottom-inner">
+          <div class="footer-custom__copyright">
+            Copyright &copy; {{ shop.name }} {{ 'now' | date: '%Y' }}
+          </div>
 
-      <div class="footer-custom__credits">
-        {%- if credits_url != blank -%}
-          <a class="navlink" href="{{ credits_url }}">
-            <span class="navtext">{{ credits_label | default: 'Credits' | escape }}</span>
-          </a>
-        {%- else -%}
-          <span class="navtext">{{ credits_label | default: 'Credits' | escape }}</span>
-        {%- endif -%}
+          <div class="footer-custom__credits">
+            {%- if credits_url != blank -%}
+              <a class="navlink" href="{{ credits_url }}">
+                <span class="navtext">{{ credits_label | default: 'Credits' | escape }}</span>
+              </a>
+            {%- else -%}
+              <span class="navtext">{{ credits_label | default: 'Credits' | escape }}</span>
+            {%- endif -%}
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -360,6 +463,27 @@
       "id": "bg_image",
       "label": "Background image",
       "info": "Pinned to the bottom, full width."
+    },
+    {
+      "type": "select",
+      "id": "bg_fit_desktop",
+      "label": "Background fit (desktop)",
+      "default": "contain",
+      "options": [
+        { "value": "contain", "label": "Contain (no crop)" },
+        { "value": "cover", "label": "Cover (crop)" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "bg_position_desktop",
+      "label": "Background position (desktop)",
+      "default": "bottom center",
+      "options": [
+        { "value": "top center", "label": "Top" },
+        { "value": "center center", "label": "Center" },
+        { "value": "bottom center", "label": "Bottom" }
+      ]
     },
     {
       "type": "range",
