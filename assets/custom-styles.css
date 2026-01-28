@@ -56,7 +56,6 @@
     --FONT-STACK-BODY: 'HK Grotesk' !important;
     --BTN-FONT-STACK: 'American Grotesk' !important;
     --BTN-LETTER-SPACING: 0 !important;
-    --SOCIAL-VIDEO-ASPECT-RATIO: 4 / 3 !important;
     --btn-bg-hover: #FEEC5E;
 }
 
@@ -248,6 +247,7 @@ p {
         .grid__heading {
             width: 75%;
             margin: auto;
+            line-height: 1.1;
         }
 
     }
