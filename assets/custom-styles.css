@@ -264,6 +264,14 @@ p {
 
     }
 
+ /*------------------------------------
+ *   MERCH ALERT
+ *------------------------------------*/
+@media (min-width: 750px) {
+    .merch-alert {
+        border-top: 1px solid #221F1F;
+    }
+}
 
 
  /*------------------------------------
@@ -381,13 +389,17 @@ p {
    /*------------------------------------
  *   NEWSLETTER
  *------------------------------------*/
-
-
- .index-newsletter {
+@media (min-width: 749px) {
+     .index-newsletter {
     .newsletter__wrapper {
         width: 50% !important;
         margin: auto !important;
     }
+}
+}
+
+ .index-newsletter {
+
 
     .klaviyo-form {
         input {
