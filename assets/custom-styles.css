@@ -334,6 +334,12 @@ p {
         font-size: .75rem !important;
         letter-spacing: 0 !important;
     }
+
+    @media (max-width: 749px) {
+        .btn__price {
+            display: none !important;
+        }
+    }
  }
 
  /*------------------------------------
