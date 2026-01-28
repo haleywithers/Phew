@@ -42,7 +42,7 @@
     font-family: 'Awesome Serif';
     src: url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalic-Regular.woff2?v=1769617250') format('woff2'),
         url('https://cdn.shopify.com/s/files/1/0948/1171/7975/files/AwesomeSerifItalic-Regular.woff?v=1769617250') format('woff');
-    font-weight: 300;
+    font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
