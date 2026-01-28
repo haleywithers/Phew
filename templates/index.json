@@ -52,7 +52,7 @@
         "flex_align_mobile": "align--bottom-left-mobile",
         "color_scheme": "scheme-3",
         "show_text_background": false,
-        "overlay_type": "disabled",
+        "overlay_type": "opacity",
         "padding_top": 0,
         "padding_bottom": 0,
         "show_placeholder": true
