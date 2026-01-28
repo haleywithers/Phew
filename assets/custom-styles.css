@@ -399,10 +399,10 @@ p {
     border: 1px solid #221F1F;
  }
 
- .shopify-pc__banner__btn-accept {
-    border: 0;
-    border-radius: 50px;
-    font-family: 'American Grotesk'; 
+ .shopify-pc__banner__btn-accept, .shopify-pc__banner__btn-decline {
+    border: 0 !important;
+    border-radius: 50px !important;
+    font-family: 'American Grotesk' !important; 
     text-transform: uppercase;
  }
 
