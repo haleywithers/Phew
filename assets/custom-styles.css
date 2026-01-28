@@ -242,6 +242,12 @@ p {
     .accordion-group {
         padding-bottom: 4rem;
     }
+
+    .accordion__title {
+
+    font-size: var(--font-heading-x-small);
+
+    }
 }
 
  /*------------------------------------
