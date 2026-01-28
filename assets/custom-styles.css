@@ -360,8 +360,8 @@ p {
         padding-right: var(--gap);
     }
 
-    luna-templates-animated-sticker .stckrimg img {
-        transform: rotate(-25deg) !important;
+    .luna-templates-animated-sticker .stckrimg img {
+        transform: rotate(-5deg) !important;
     }
  }
 
