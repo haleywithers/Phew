@@ -347,6 +347,7 @@ p {
  @media (max-width:749px) {
     .timeline__inner {
         padding-top: 7rem;
+        padding-bottom: 3rem;
     }
 
     .static-timeline__image-side {
