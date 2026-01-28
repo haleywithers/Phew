@@ -531,5 +531,11 @@ p {
     .footer-custom__bottom {
         padding: .5rem;
     }
+
+    .footer-custom__inner {
+        .container {
+            padding-top: 3rem;
+        }
+    }
  }
 
