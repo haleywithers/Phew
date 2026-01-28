@@ -113,6 +113,12 @@ p {
     text-transform: none;
     max-width: 400px;
 }
+
+.image-overlay {
+.opacity: 50% !important;
+
+}
+
 }
 
 @media (max-width: 749px) {
