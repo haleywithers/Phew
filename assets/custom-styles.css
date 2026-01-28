@@ -121,7 +121,7 @@ p {
             max-width: 75%;
 
             h2 {
-                    font-size: var(--font-heading-small) !important;
+                    font-size: 25px !important;
             }
         }
     }
