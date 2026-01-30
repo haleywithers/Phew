@@ -315,16 +315,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
   }
-
-  #StaticTimeline--{{ section.id }} .static-timeline__image-wrapper img {
-  {%- if section.settings.image.presentation.focal_point -%}
-    object-position: {{ section.settings.image.presentation.focal_point.x | times: 100 }}% {{ section.settings.image.presentation.focal_point.y | times: 100 }}%;
-  {%- else -%}
-    object-position: center;
-  {%- endif -%}
-}
 
   .static-timeline__placeholder {
     width: 100%;
