@@ -394,6 +394,10 @@ p {
     }
  }
 
+ .product-item__bg__under::after {
+    display: none !important;
+ }
+
  /*------------------------------------
  *  KLAYVIO
  *------------------------------------*/
