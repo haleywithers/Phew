@@ -64,7 +64,7 @@
     "show_preorder_badge": true,
     "preorder_bg_color": "#644d3e",
     "favicon": "shopify://shop_images/Phew_Icon_f71c44b5-cfa0-4cf6-98ca-8763533dd30d.svg",
-    "free_shipping_limit": "200",
+    "free_shipping_limit": "",
     "show_lock_icon": true,
     "show_recently_viewed_products": true,
     "checkout_logo_position": "left",
