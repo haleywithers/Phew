@@ -432,7 +432,7 @@
             "heading": "Real Life Ready",
             "heading_font_size": "heading-medium",
             "text": "<p>Small enough to live in your bag, quick enough to use in the middle of everything, strong enough that you notice the difference</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "heading_tag": "automatic"
           }
         },
@@ -442,7 +442,7 @@
             "heading": "Better Absorption",
             "heading_font_size": "heading-medium",
             "text": "<p>Vitamin sprays go straight into the bloodstream so are 2.6 times more effective than tablets and capsules. Say what????</p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "heading_tag": "automatic"
           }
         },
@@ -452,7 +452,7 @@
             "heading": "Soooooo Easy",
             "heading_font_size": "heading-medium",
             "text": "<p>Zero Faff. Open mouth and spray. No psyching yourself up to swallow that capsule.  Feeling better already? </p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "heading_tag": "automatic"
           }
         },
@@ -462,7 +462,7 @@
             "heading": "Longer Lasting",
             "heading_font_size": "heading-medium",
             "text": "<p>Our fancy airless bottles last longer. The good stuff stays good, even if lost in a drawer for three months. </p>",
-            "text_font_size": "body-small",
+            "text_font_size": "body-medium",
             "heading_tag": "automatic"
           }
         }
