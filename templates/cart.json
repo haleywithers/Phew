@@ -12,16 +12,6 @@
     "cart": {
       "type": "cart",
       "blocks": {
-        "cart-message": {
-          "type": "cart-message",
-          "settings": {}
-        },
-        "free-shipping": {
-          "type": "free-shipping",
-          "settings": {
-            "message": "You are ||amount|| away from free shipping."
-          }
-        },
         "order-note": {
           "type": "order-note",
           "disabled": true,
@@ -31,24 +21,31 @@
           "type": "gift-note",
           "settings": {}
         },
-        "upsell-products": {
-          "type": "upsell-products",
-          "settings": {}
-        },
         "checkout-buttons": {
           "type": "checkout-buttons",
-          "settings": {}
+          "settings": {
+            "enable_additional_buttons": false
+          }
+        },
+        "upsell-products": {
+          "type": "upsell-products",
+          "settings": {
+            "upsell_auto_open": true
+          }
         }
       },
       "block_order": [
-        "free-shipping",
         "order-note",
         "gift-note",
-        "cart-message",
         "checkout-buttons",
         "upsell-products"
       ],
-      "settings": {}
+      "settings": {
+        "text_font_size": "body-medium",
+        "color_scheme": "",
+        "padding_top": 80,
+        "padding_bottom": 50
+      }
     }
   },
   "order": [
