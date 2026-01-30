@@ -581,7 +581,7 @@ p {
         font-size: var(--font-body-medium);
  }
 
- .cart__item__content-inner {
+ .cart__item__content-inner a {
     font-size: var(--font-body-medium) !important;
     text-transform: uppercase !important;
  }
