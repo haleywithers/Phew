@@ -525,6 +525,10 @@ p {
     text-transform: uppercase;
  }
 
+ .shopify-pc__banner__body-policy-link {
+    text-decoration: none !important;
+ }
+
     /*------------------------------------
  *   FOOTER
  *------------------------------------*/
