@@ -573,3 +573,15 @@ p {
     justify-content: center !important;
  }
 
+ /*------------------------------------
+ *   CART
+ *------------------------------------*/
+
+ .cart__total__price, .cart__price {
+        font-size: var(--font-body-medium);
+ }
+
+ .cart__item__content-inner {
+    font-size: var(--font-body-medium);
+    text-transform: uppercase;
+ }
