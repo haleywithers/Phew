@@ -582,6 +582,6 @@ p {
  }
 
  .cart__item__content-inner a {
-    font-size: var(--font-body-medium) !important;
+    font-size: var(--font-body-large) !important;
     text-transform: uppercase !important;
  }
