@@ -313,7 +313,7 @@
           "settings": {
             "default_open": false,
             "title": "Why are sprays awesome?",
-            "content": "<p>Pills need time. Powders need commitment. Sprays work faster, travel better and don’t need a routine.  A small switch that makes support easier to stick with. Give your supplement shelf a quick glance, how much has been spent on aspirational vitamins? Are they even being absorbed into your body?  Sprays are not magic — it’s just a smarter way to take vitamins.</p>",
+            "content": "<p>Pills need time. Powders need commitment. Sprays work faster, travel better and don’t need a routine.  A small switch that makes support easier to stick with. Give your supplement shelf a quick glance, how much has been spent on aspirational vitamins? Are they even being absorbed into your body?  Oral supplement sprays are an easy win.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
@@ -337,7 +337,7 @@
           "settings": {
             "default_open": false,
             "title": "What is in Steady On Oral Spray?",
-            "content": "<p>Steady On is our hero calming oral spray. We spent a long time looking at what ingredients we found actually useful. There’s no room for filler here<strong>.</strong></p><p>Vitamin B6 - Think of this as steady support for busy days. Vitamin B6 helps your nervous system tick along calmly and supports energy when you’re running on fumes.</p><p>Ashwagandha (KSM-66®) - The calm one that knows life’s not getting quieter. Ashwagandha is an adaptogen, which means it helps your body handle stress a little better instead of trying to erase it altogether. KSM-66® is a well-studied form that supports calmer days without making you feel flat or foggy.</p><p>L-Theanine - For when your brain won’t stop chatting. L-Theanine helps take the edge off racing thoughts, supporting a calm, focused feeling without drowsiness. It’s the kind of calm that lets you stay present, not switch off completely.</p><p>Lemon Balm A gentle exhale in plant form. Lemon balm has been used for centuries to support relaxation and ease nervous tension. Soft, soothing and grounding — perfect for those moments when you just need things to feel a bit steadier.</p>",
+            "content": "<p>Steady On is our hero calming oral spray. We spent a long time testing what ingredients really make a difference. There’s no room for filler here.</p><p>Vitamin B6 - Think of this as steady support for busy days. Vitamin B6 helps your nervous system tick along calmly and supports energy when you’re running on fumes.</p><p>Ashwagandha (KSM-66®) - The calm one that knows life’s not getting quieter. Ashwagandha is an adaptogen, which means it helps your body handle stress a little better instead of trying to erase it altogether. KSM-66® is a well-studied form that supports calmer days without making you feel flat or foggy.</p><p>L-Theanine - For when your brain won’t stop chatting. L-Theanine helps take the edge off racing thoughts, supporting a calm, focused feeling without drowsiness. It’s the kind of calm that lets you stay present, not switch off completely.</p><p>Lemon Balm - A gentle exhale in plant form. Lemon balm has been used for centuries to support relaxation and ease nervous tension. Soft, soothing and grounding — perfect for those moments when you just need things to feel a bit steadier.</p>",
             "show_icon": false,
             "icon_name": "icon-award",
             "icon_size": 20,
@@ -522,7 +522,7 @@
       ],
       "name": "Social videos",
       "settings": {
-        "heading": "Phew Crew Community",
+        "heading": "See what we are up to",
         "heading_font_size": "heading-medium",
         "text": "<p><a href=\"https://www.tiktok.com/@phewcrew\" title=\"https://www.tiktok.com/@phewcrew\">Follow us @phewcrew</a></p>",
         "text_font_size": "body-medium",
