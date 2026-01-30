@@ -204,16 +204,6 @@
     width: 100% !important;
     opacity: 1 !important;
   }
-
-  /* Focal point positioning */
-  {%- if section.settings.image -%}
-    {%- assign focal_point = section.settings.image.presentation.focal_point -%}
-    {%- if focal_point -%}
-      #StaticTimeline--{{ section.id }} .static-timeline__image-wrapper img {
-        object-position: {{ focal_point.x | times: 100 }}% {{ focal_point.y | times: 100 }}%;
-      }
-    {%- endif -%}
-  {%- endif -%}
 {%- endstyle -%}
 
 <style>
