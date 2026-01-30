@@ -204,6 +204,13 @@
     width: 100% !important;
     opacity: 1 !important;
   }
+
+  /* Focal point positioning */
+  {%- if section.settings.image.presentation.focal_point -%}
+    #StaticTimeline--{{ section.id }} .static-timeline__image-wrapper img {
+      object-position: {{ section.settings.image.presentation.focal_point.x | times: 100 }}% {{ section.settings.image.presentation.focal_point.y | times: 100 }}%;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 <style>
