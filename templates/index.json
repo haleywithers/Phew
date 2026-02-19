@@ -260,7 +260,7 @@
             "title": "Laura S",
             "subheading": "Customer",
             "review_content": "<p>I’ve never been great at taking capsules, so discovering the spray felt like a bit of a revelation. It’s so easy to use, I carry it with me everywhere, and it just fits effortlessly into my day. It really works for me.</p>",
-            "featured_image": "shopify://shop_images/b17d501e-fa01-46d1-8666-d62d45cc33dc.jpg",
+            "featured_image": "shopify://shop_images/37f80dd4-6c23-4491-a1cd-d7125dbd08b5.jpg",
             "review_url": ""
           }
         },
@@ -270,7 +270,7 @@
             "title": "Cassie K",
             "subheading": "Customer",
             "review_content": "<p>After a few sprays, I felt noticeably calmer and more at ease with myself. I used it before a Zoom meeting I was dreading, and it genuinely helped me feel more settled and focused going into it.</p>",
-            "featured_image": "shopify://shop_images/b0b88fa8-bb6d-4f44-af0a-280e468d155b.jpg",
+            "featured_image": "shopify://shop_images/742e9aad-21f4-4a2c-9b2a-8b2930dd7bb7.jpg",
             "review_url": ""
           }
         }
@@ -488,7 +488,8 @@
         "video_6UHPzQ": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/Mask_group.jpg",
+            "image": "shopify://shop_images/IMG_3235.jpg",
+            "video": "shopify://files/videos/meet the founders 2.MOV",
             "badge_text": "@tiktok"
           }
         },
