@@ -51,6 +51,7 @@
         },
         "estimate_delivery_DiXqn4": {
           "type": "estimate_delivery",
+          "disabled": true,
           "settings": {
             "label": "Estimated delivery:",
             "days_from_today": 5,
