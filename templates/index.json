@@ -581,7 +581,7 @@
       ],
       "name": "Image with text",
       "settings": {
-        "image_1": "shopify://shop_images/e528793f7d44d1e98ca8fde742970f7d8f02b2f2.jpg",
+        "image_1": "shopify://shop_images/phew_beanie.png",
         "image_width": "one-half",
         "text_alignment": "text-center",
         "layout": "is-reversed",
