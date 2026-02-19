@@ -198,7 +198,7 @@
             "title": "{{ product.metafields.custom.testimonial_one.value.name.value }}",
             "subheading": "{{ product.metafields.custom.testimonial_one.value.role.value }}",
             "review_content": "<p>{{ product.metafields.custom.testimonial_one.value.testimonial.value }}</p>",
-            "featured_image": "{{ product.metafields.custom.testimonial_one.value.photo.value }}",
+            "featured_image": "shopify://shop_images/adf6cf16-509c-446d-b316-fb0dca0d2a07_0fb7061e-9c10-42b9-a7c5-0af030574556.jpg",
             "review_url": ""
           }
         },
@@ -208,7 +208,7 @@
             "title": "{{ product.metafields.custom.testimonial_two.value.name.value }}",
             "subheading": "{{ product.metafields.custom.testimonial_two.value.role.value }}",
             "review_content": "<p>{{ product.metafields.custom.testimonial_two.value.testimonial.value }}</p>",
-            "featured_image": "{{ product.metafields.custom.testimonial_two.value.photo.value }}",
+            "featured_image": "shopify://shop_images/IMG_3270.jpg",
             "review_url": ""
           }
         }
