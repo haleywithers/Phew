@@ -496,21 +496,23 @@
         "video_9n3cLy": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/Mask_group.jpg",
+            "image": "shopify://shop_images/2026-02-19_12-15-07.jpg",
+            "video": "shopify://files/videos/Phew - Coming Soon for shopify.mp4",
             "badge_text": "@tiktok"
           }
         },
         "video_NzRKTQ": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/Mask_group.jpg",
+            "image": "shopify://shop_images/IMG_3237.jpg",
+            "video": "shopify://files/videos/Blurred Image - Stay Tuned.mp4",
             "badge_text": "@tiktok"
           }
         },
         "video_77GX38": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/Mask_group.jpg",
+            "image": "shopify://shop_images/Billboard_no_pills_instagram_static_image.png",
             "badge_text": "@tiktok"
           }
         }
