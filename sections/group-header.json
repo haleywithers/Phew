@@ -14,18 +14,6 @@
     "announcement": {
       "type": "announcement",
       "blocks": {
-        "text_FnRVXt": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pre-Order Now</p>",
-            "target_url_enabled": false,
-            "target_url": "",
-            "target_referrer_enabled": false,
-            "target_referrer": "",
-            "target_device_enabled": false,
-            "target_device": "mobile"
-          }
-        },
         "text": {
           "type": "text",
           "settings": {
@@ -40,7 +28,6 @@
         }
       },
       "block_order": [
-        "text_FnRVXt",
         "text"
       ],
       "settings": {
