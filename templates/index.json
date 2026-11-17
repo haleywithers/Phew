@@ -512,7 +512,8 @@
         "video_77GX38": {
           "type": "video",
           "settings": {
-            "image": "shopify://shop_images/Billboard_no_pills_instagram_static_image.png",
+            "image": "shopify://shop_images/IMG_9026.png",
+            "video": "shopify://files/videos/aad259910a024a4899adaa2c1c6176b6.MP4",
             "badge_text": "@tiktok"
           }
         }
