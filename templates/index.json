@@ -97,13 +97,17 @@
         "padding_bottom": 20
       }
     },
+    "179552034178a4a3fd": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "product_hero_home_CdDEa9": {
       "type": "product-hero-home",
       "blocks": {
         "image_wYC6yf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/buy_women_built_with_product.jpg",
+            "image": "shopify://shop_images/buy_women_built_with_product_1.jpg",
             "image_width": 80,
             "padding_bottom": 16
           }
@@ -729,6 +733,7 @@
   "order": [
     "section_hero_jxHLCy",
     "section_announcement_9hAXy4",
+    "179552034178a4a3fd",
     "product_hero_home_CdDEa9",
     "section_multicolumn_DMN9Rc",
     "section_reviews_cY9Cpp",
