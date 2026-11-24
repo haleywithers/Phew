@@ -45,7 +45,7 @@
     "tiktok_link": "https://www.tiktok.com/@tryphew",
     "product_grid_aspect_ratio": 1.2,
     "form_style": "modern",
-    "final_sale": true,
+    "final_sale": false,
     "quantity_style": "standard",
     "atc_show_product_price": true,
     "swatch_style": "circle",
